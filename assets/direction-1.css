@@ -2,5 +2,62 @@
 /*This style is inpired by Dadaism */
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 
+:root{
+    --base-size:20px;
+}
+
+
+
+*{
+	background-color: #938979;
+}
+
+h1{
+	font-family: 'Anton';
+	font-size: calc(var(--base-size)*3);
+	color: #8F080C;
+	padding: 40px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	line-height: 90px;
+	vertical-align: baseline;
+	transition: line-height 0.1s ease; /* Smooth transition */
+}
+
+
+h1:active {
+	line-height: 30px;
+	transform: rotate(-5deg); 
+  }
+
+
+
+
+
+.TitleWord {
+	font-size: calc(var(--base-size)*4);
+	color: #938979;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #8F080C;
+
+}
+  
+
+body{
+	font-family: 'IBM Plex Mono', monospace;
+}
+
+@media (min-width: 800px) {
+	h1{
+		font-size: calc(var(--base-size)*8);
+		line-height: 200px;
+	}
+
+	.TitleWord {
+		font-size: calc(var(--base-size)*11);
+	}
+
+}

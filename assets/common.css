@@ -2,8 +2,13 @@
 
 * {
 	
-	margin-top: 20;
-	padding-left: 16;
+	/* margin-top: 20; */
+	/* padding-left: 16; */
 	/* box-sizing: border-box; */
 	
+}
+
+p{
+	padding-left: 12px;
+	padding-right: 12px;
 }
