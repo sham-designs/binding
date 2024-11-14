@@ -1,3 +1,82 @@
-p{
-	font-family: 'Times New Roman', Times, serif;
+
+
+/*This style is meant to say that everything is clean, white, in a box (like traditional graphic design) but the quotes show a glitch */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Iso&display=swap');
+
+/* Apply Helvetica to the whole page */
+body {
+    font-family: Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Light background color for the page */
+}
+
+/* Apply styles to every section and header */
+section{
+    background-color: white; /* White background for all sections */
+    padding: 20px; /* Add padding to make the content more readable */
+    margin: 20px 0; /* Space between sections */
+}
+
+/* Add border top and bottom to all sections and headers */
+section {
+    border-top: 1px solid #ddd; /* Thin border at the top */
+    border-bottom: 1px solid #ddd; /* Thin border at the bottom */
+}
+
+/* Apply a thin border across the entire header group */
+hgroup {
+    margin-bottom: 20px; /* Space below header group */
+}
+
+/* Increase size of h1 */
+h1 {
+    font-size: 2.5em; /* Larger size for h1 */
+    font-weight: bold;
+    margin-top: 0; /* Remove extra space above h1 */
+    margin-bottom: 10px; /* Space below h1 */
+}
+
+/* Style the headers */
+h2, h3 {
+    font-weight: bold;
+    margin-top: 0; /* Remove extra space above h2/h3 */
+    margin-bottom: 10px; /* Space below h2/h3 */
+}
+
+/* Style the quotes with Rubik glitch font and neon green background */
+blockquote, .TitleWord {
+    font-family: 'Rubik', sans-serif; /* Use Rubik font for the quote */
+    font-style: italic;
+    background-color: #62E810; /* Neon green background */
+    color: white; /* White text color for contrast */
+    padding: 20px;
+    border: 1px solid #ddd; /* Thin border around the quote */
+    border-radius: 4px;
+    margin: 20px 0;
+    position: relative;
+    line-height: 1.6;
+}
+
+/* Optional: To achieve a subtle glitch effect */
+@keyframes glitch {
+    0% {
+        text-shadow: 1px 0 red, -1px 0 blue;
+        transform: skew(0.3deg);
+    }
+    50% {
+        text-shadow: -1px 0 red, 1px 0 blue;
+        transform: skew(-0.3deg);
+    }
+    100% {
+        text-shadow: 1px 0 red, -1px 0 blue;
+        transform: skew(0.3deg);
+    }
+}
+
+/* Apply the glitch animation with slower speed */
+blockquote, .TitleWord {
+    animation: glitch 1s infinite linear; /* Slower glitch effect */
 }
