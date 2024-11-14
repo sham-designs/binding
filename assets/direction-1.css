@@ -24,15 +24,65 @@ h1{
 	margin-bottom: 40px;
 	line-height: 90px;
 	vertical-align: baseline;
-	transition: line-height 0.1s ease; /* Smooth transition */
+	transition: transform 0.3s ease; 
+	/* transition: transform 0.3s ease, line-height 0.1s ease; */
+	position: relative;	
 }
 
 
-h1:active {
-	line-height: 30px;
-	transform: rotate(-5deg); 
-  }
+/* Randomized rotation on hover */
+h1:hover {
+    transform: rotate(3deg); /* Change to a slight rotation */
+}
 
+/* Randomized rotation on click */
+h1:active {
+    transform: rotate(-4deg); /* Change to a different rotation */
+}
+
+
+/* "Click to Break" text, hidden by default */
+h1::after {
+    content: "Click to Break";
+    font-size: calc(var(--base-size) * 0.8);
+    color: #8F080C;
+    position: absolute;
+    bottom: -20px; /* Position text below the heading */
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: none; /* Hide by default */
+}
+
+/* Display "Click to Break" text on mobile screens only */
+@media (max-width: 600px) {
+    h1::after {
+        display: block; /* Show only on screens smaller than 600px */
+    }
+}
+
+
+
+/* Randomized-looking rotation on hover */
+/* h1:hover {
+    animation: randomRotation 0.5s ease forwards;
+} */
+
+/* Randomized rotation on click */
+/* h1:active {
+    line-height: 30px;
+    animation: randomRotation 2s ease forwards;
+} */
+
+/* Keyframes to simulate random rotation */
+/* @keyframes randomRotation {
+    0% { transform: rotate(1deg); }
+    20% { transform: rotate(-3deg); }
+    40% { transform: rotate(2deg); }
+    60% { transform: rotate(-4deg); }
+    80% { transform: rotate(3deg); }
+    100% { transform: rotate(-2deg); }
+} */
 
 
 
