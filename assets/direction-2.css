@@ -4,79 +4,90 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Iso&display=swap');
 
-/* Apply Helvetica to the whole page */
-body {
-    font-family: Helvetica, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8; /* Light background color for the page */
-}
 
-/* Apply styles to every section and header */
-section{
-    background-color: white; /* White background for all sections */
-    padding: 20px; /* Add padding to make the content more readable */
-    margin: 20px 0; /* Space between sections */
-}
 
-/* Add border top and bottom to all sections and headers */
-section {
-    border-top: 1px solid #ddd; /* Thin border at the top */
-    border-bottom: 1px solid #ddd; /* Thin border at the bottom */
-}
-
-/* Apply a thin border across the entire header group */
 hgroup {
-    margin-bottom: 20px; /* Space below header group */
-}
-
-/* Increase size of h1 */
-h1 {
-    font-size: 2.5em; /* Larger size for h1 */
-    font-weight: bold;
-    margin-top: 0; /* Remove extra space above h1 */
-    margin-bottom: 10px; /* Space below h1 */
-}
-
-/* Style the headers */
-h2, h3 {
-    font-weight: bold;
-    margin-top: 0; /* Remove extra space above h2/h3 */
-    margin-bottom: 10px; /* Space below h2/h3 */
-}
-
-/* Style the quotes with Rubik glitch font and neon green background */
-blockquote, .TitleWord {
-    font-family: 'Rubik', sans-serif; /* Use Rubik font for the quote */
-    font-style: italic;
-    background-color: #62E810; /* Neon green background */
-    color: white; /* White text color for contrast */
-    padding: 20px;
-    border: 1px solid #ddd; /* Thin border around the quote */
-    border-radius: 4px;
-    margin: 20px 0;
     position: relative;
-    line-height: 1.6;
+    padding: 40px 0; /* Increase padding for top and bottom lines */
+    margin-bottom: 30px; /* Extra space below hgroup */
+    text-align: center; /* Center-align text */
+    font-family: Helvetica, sans-serif;
+    transition: font-family 0.3s ease;
 }
 
-/* Optional: To achieve a subtle glitch effect */
-@keyframes glitch {
-    0% {
-        text-shadow: 1px 0 red, -1px 0 blue;
-        transform: skew(0.3deg);
-    }
-    50% {
-        text-shadow: -1px 0 red, 1px 0 blue;
-        transform: skew(-0.3deg);
-    }
-    100% {
-        text-shadow: 1px 0 red, -1px 0 blue;
-        transform: skew(0.3deg);
-    }
-}
 
-/* Apply the glitch animation with slower speed */
-blockquote, .TitleWord {
-    animation: glitch 1s infinite linear; /* Slower glitch effect */
-}
+
+
+/* Styling for hgroup */
+hgroup {
+	position: relative;
+	background-color: white;
+	font-family: 'Helvetica', sans-serif;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	padding: 20px 0; /* Add space for the lines */
+  }
+  
+  /* Top and bottom lines */
+  hgroup::before,
+  hgroup::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 2px; /* Thickness of the line */
+	background-color: black; /* Color of the line */
+	transition: background-color 0.3s ease;
+  }
+  
+  hgroup::before {
+	top: 0; /* Position line at the top */
+  }
+  
+  hgroup::after {
+	bottom: 0; /* Position line at the bottom */
+  }
+  
+  /* Hover effect for desktop */
+  @media (hover: hover) {
+	hgroup:hover {
+	  background-color: limegreen;
+	  transform: scale(1.05);
+	}
+  
+	/* Change to Rubik Glitch font on hover */
+	hgroup:hover h1, hgroup:hover section {
+	  color: black;
+	  font-family: 'Rubik Glitch', sans-serif;
+	  text-transform: uppercase;
+	  text-shadow: 1px 1px 2px black;
+	}
+  
+	/* Change line color on hover */
+	hgroup:hover::before,
+	hgroup:hover::after {
+	  background-color: limegreen;
+	}
+  }
+  
+  /* Click effect for mobile */
+  @media (hover: none) {
+	hgroup:active {
+	  background-color: limegreen;
+	  transform: scale(1.05);
+	}
+  
+	/* Change to Rubik Glitch font on click for mobile */
+	hgroup:active h1, hgroup:active section {
+	  color: black;
+	  font-family: 'Rubik Glitch', sans-serif;
+	  text-transform: uppercase;
+	  text-shadow: 1px 1px 2px black;
+	}
+  
+	/* Change line color on click */
+	hgroup:active::before,
+	hgroup:active::after {
+	  background-color: limegreen;
+	}
+  }
+  
