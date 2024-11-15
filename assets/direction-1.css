@@ -50,14 +50,14 @@ h1::after {
     font-size: calc(var(--base-size) * 0.8);
     color: #8F080C;
     position: absolute;
-    bottom: -50px; /* Position text below the heading */
+    bottom: -50px; 
     left: 0;
     right: 20px;
     text-align: right;
-    display: none; /* Hide by default */
+    display: none; 
 }
 
-/* Display "Click to Break" text on mobile screens only, also using for mobile media queries */
+/*  "Click to Break" text on mobile screens only, also using for mobile media queries */
 @media (max-width: 600px) {
     h1::after {
         display: block; 
@@ -119,7 +119,7 @@ h3{
     transform: rotate(-2deg);
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    text-decoration-color: #938979; /* Underline to give a cut-out effect */
+    text-decoration-color: #938979; 
 }
 
 /* Trying some things for h3 */
@@ -167,7 +167,7 @@ blockquote {
 }
 
 .author:hover {
-    transform: rotate(1deg); /* Adds a playful shift when hovered */
+    transform: rotate(1deg); 
 }
 
 .author em {
