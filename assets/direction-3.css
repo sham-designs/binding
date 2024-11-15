@@ -6,7 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+	font-family: 'Courier New', monospace; /* Typewriter font with a raw edge */
     background-color: black;
     color: white;
     padding: 20px;
@@ -20,7 +20,7 @@ h1 {
     text-transform: uppercase;
     margin: 20px;
     padding: 10px 20px;
-    font-family: Arial, sans-serif;
+	font-family: 'Courier New', monospace;
     transition: all 0.3s ease; /* Smooth transition for hover effect */
     flex-shrink: 0; /* Prevent shrinking */
     max-width: 100%; /* Prevent it from overflowing */
@@ -28,7 +28,10 @@ h1 {
     text-align: left; /* Align it to the left */
 }
 
-
+h3{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
 
 .glitch, .question-mark {
     font-family: 'Rubik Glitch', sans-serif;
@@ -66,15 +69,24 @@ h1 {
 
    
     h1 {
-        font-size: 2em;
+        font-size: 3em;
         margin: 10px 0;
     }
+
+
 
     .article-content {
         margin: 20px 0;
         font-size: 1rem;
         line-height: 1.6;
     }
+
+	.author, h3 {
+        color: #FF00FF; /* Neon pink for rebellious tone */
+        text-shadow: 2px 0 #00FFFF, -2px 0 #FF00FF, 0 2px #00FFFF, 0 -2px #FF00FF; /* Glitchy text-shadow */
+    }
+
+
 }
 
 
@@ -104,4 +116,19 @@ h1 {
         animation: glitch-animation 3s infinite; /* Apply glitch animation on hover */
     }
 
+}
+
+
+
+.author, h3 {
+    font-family: 'Courier New', monospace; /* Typewriter font with a raw edge */
+    font-weight: bold;
+
+}
+
+/* Adding a subtle glitch effect on hover for author and h2 */
+.author:hover, h3:hover {
+    color: #FF6347; /* Change color on hover for emphasis */
+    text-shadow: 4px 0 #FF6347, -4px 0 #FF00FF, 0 4px #FF6347, 0 -4px #FF6347; /* Stronger glitch effect */
+    transform: skew(-5deg) translateX(10px); /* Skew text to create a "broken" feel */
 }
