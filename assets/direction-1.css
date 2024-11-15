@@ -123,8 +123,21 @@ body{
 }
 
 
-.highlight {
-	text-decoration: line-through;
+
+
+
+/* Asymmetrical blockquote styling */
+blockquote {
+    font-size: calc(var(--base-size) * 1.2);
+    font-style: italic;
     color: #8F080C;
+    border: 4px solid #938979;
+    border-left: 10px solid #8F080C;
+    background-color: #D9D0C2;
+    padding: 20px;
+    margin: 30px 10px;
+    position: relative;
+    font-family: 'IBM Plex Mono', monospace;
+    transform: rotate(-2deg);
 }
 
