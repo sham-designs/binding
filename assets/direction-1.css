@@ -34,7 +34,7 @@ h1{
 
 /* Rotation animation for desktop */
 h1:hover {
-    transform: rotate(4deg) scale(1.05);
+    transform: rotate(4deg);
 }
 
 /* Rotation animation for mobile */
@@ -71,7 +71,6 @@ h1::after {
 
 
 }
-
 
 
 
