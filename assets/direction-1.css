@@ -19,25 +19,28 @@ h1{
 	font-family: 'Anton';
 	font-size: calc(var(--base-size)*3);
 	color: #8F080C;
-	padding: 40px;
+	padding: 10px;
 	margin-top: 40px;
 	margin-bottom: 40px;
 	line-height: 90px;
 	vertical-align: baseline;
-	transition: transform 0.3s ease; 
+	transition: transform 0.1s ease; 
 	/* transition: transform 0.3s ease, line-height 0.1s ease; */
 	position: relative;	
+	text-transform: lowercase;
+
+
 }
 
 
-/* Randomized rotation on hover */
+/* Rotation animation for desktop */
 h1:hover {
-    transform: rotate(3deg); /* Change to a slight rotation */
+    transform: rotate(4deg) scale(1.05);
 }
 
-/* Randomized rotation on click */
+/* Rotation animation for mobile */
 h1:active {
-    transform: rotate(-4deg); /* Change to a different rotation */
+    transform: rotate(-6deg); 
 }
 
 
@@ -47,10 +50,10 @@ h1::after {
     font-size: calc(var(--base-size) * 0.8);
     color: #8F080C;
     position: absolute;
-    bottom: -20px; /* Position text below the heading */
+    bottom: -50px; /* Position text below the heading */
     left: 0;
-    right: 0;
-    text-align: center;
+    right: 20px;
+    text-align: right;
     display: none; /* Hide by default */
 }
 
@@ -92,9 +95,16 @@ h1::after {
 	color: #938979;
 	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color: #8F080C;
+    text-transform: lowercase;
+	text-decoration: line-through;
 
 }
   
+
+
+
+
+
 
 body{
 	font-family: 'IBM Plex Mono', monospace;
@@ -111,3 +121,10 @@ body{
 	}
 
 }
+
+
+.highlight {
+	text-decoration: line-through;
+    color: #8F080C;
+}
+
