@@ -45,7 +45,7 @@ h1:active {
 
 /* "Click to Break" text */
 h1::after {
-    content: "Click to Break";
+    content: "Click to Break | ";
     font-size: calc(var(--base-size) * 0.8);
     color: #8F080C;
     position: absolute;
@@ -56,11 +56,20 @@ h1::after {
     display: none; /* Hide by default */
 }
 
-/* Display "Click to Break" text on mobile screens only */
+/* Display "Click to Break" text on mobile screens only, also using for mobile media queries */
 @media (max-width: 600px) {
     h1::after {
         display: block; 
     }
+
+
+	h3 {
+        color: #938979; /* Inverted colour default in mobile for h3*/
+        background-color: #8F080C;
+    
+    }
+
+
 }
 
 
@@ -87,6 +96,10 @@ h1::after {
 		font-size: calc(var(--base-size)*11);
 	}
 
+	h3 {
+        text-align: center; 
+	}
+
 }
 
 body{
@@ -99,7 +112,6 @@ body{
 h3{
     font-family: 'Anton', sans-serif;
     font-size: calc(var(--base-size) * 2);
-    color: #8F080C;
     text-transform: uppercase;
     margin-top: 30px;
     margin-bottom: 40px;
@@ -107,6 +119,17 @@ h3{
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-decoration-color: #938979; /* Underline to give a cut-out effect */
+}
+
+/* Trying some things for h3 */
+h3 {
+    transform: skew(-10deg);
+	letter-spacing: 10px;
+    word-spacing: 15px; 
+}
+h3:hover {
+    color: #938979;
+    background-color: #8F080C;
 }
 
 /* blockquote styling */
@@ -126,19 +149,19 @@ blockquote {
 
 /* Styling for the author section */
 .author {
-    font-family: 'IBM Plex Mono', monospace; /* Keep the consistent font */
-    font-size: calc(var(--base-size) * 1); /* Size it appropriately */
-    color: #8F080C; /* Bold, contrasting color */
+    font-family: 'IBM Plex Mono', monospace; 
+    font-size: calc(var(--base-size) * 1); 
+    color: #8F080C;
     display: flex;
     justify-content: space-between;
-    text-transform: uppercase; /* Uppercase for added impact */
-    letter-spacing: 2px; /* Slightly more space for a quirky, Dada feel */
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
     margin-top: 15px;
     margin-bottom: 20px;
     padding: 5px 10px;
-    background-color: #938979; /* A subtle background for contrast */
+    background-color: #938979; 
     border: 2px solid #8F080C;
-    transform: rotate(-1deg); /* Quirky rotation for Dadaism vibe */
+    transform: rotate(-1deg); 
     transition: transform 0.3s ease;
 }
 
@@ -150,9 +173,8 @@ blockquote {
     font-style: italic;
     text-decoration: underline;
     text-decoration: double;
-    color: #D09597; /* Soft color for the text */
-    -webkit-text-stroke: 3px #8F080C; /* Bold red stroke on the author's name */
-    text-stroke: 3px #8F080C; /* Ensures stroke appears on all browsers */
+    -webkit-text-stroke: 3px #8F080C; 
+    text-stroke: 3px #8F080C; 
 }
 
 
