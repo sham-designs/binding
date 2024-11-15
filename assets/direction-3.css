@@ -1,4 +1,4 @@
-/* Basic setup */
+/* This direction is to show "rebel"-nss using glitchy distorted fonts on header and hover */
 :root {
     --base-font-size: 16px; 
 }
@@ -6,7 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-	font-family: 'Courier New', monospace; /* Typewriter font with a raw edge */
+	font-family: 'Courier New', monospace; 
     background-color: black;
     color: white;
     padding: 20px;
@@ -14,18 +14,18 @@ body {
 
 
 h1 {
-    font-size: 8em; /* Default font size for mobile */
-    line-height: 1; /* Tighter line spacing */
+    font-size: 8em; 
+    line-height: 1;
     color: white;
     text-transform: uppercase;
     margin: 20px;
     padding: 10px 20px;
 	font-family: 'Courier New', monospace;
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
-    flex-shrink: 0; /* Prevent shrinking */
-    max-width: 100%; /* Prevent it from overflowing */
-    width: 100%; /* Ensure it takes up full width */
-    text-align: left; /* Align it to the left */
+    transition: all 0.3s ease; 
+    flex-shrink: 0; 
+    max-width: 100%; 
+    width: 100%;
+    text-align: left; 
 }
 
 h3{
@@ -36,8 +36,8 @@ h3{
 .glitch, .question-mark {
     font-family: 'Rubik Glitch', sans-serif;
     color: white;
-    text-shadow: 2px 0 #00ff00, -2px 0 #ff00ff; /* Initial shadow colors */
-    transition: none; /* Disable smooth transition for glitch effect */
+    text-shadow: 2px 0 #00ff00, -2px 0 #ff00ff; 
+    transition: none; 
 }
 
 @keyframes glitch-animation {
@@ -82,8 +82,8 @@ h3{
     }
 
 	.author, h3 {
-        color: #FF00FF; /* Neon pink for rebellious tone */
-        text-shadow: 2px 0 #00FFFF, -2px 0 #FF00FF, 0 2px #00FFFF, 0 -2px #FF00FF; /* Glitchy text-shadow */
+        color: #FF00FF;
+        text-shadow: 2px 0 #00FFFF, -2px 0 #FF00FF, 0 2px #00FFFF, 0 -2px #FF00FF; 
     }
 
 
@@ -93,15 +93,15 @@ h3{
 @media (min-width: 769px) {
     body {
         display: flex;
-        justify-content: space-between; /* Align items to the left and right */
+        justify-content: space-between; 
     }
 
     h1 {
-        flex-shrink: 0; /* Prevent the header from shrinking */
+        flex-shrink: 0; 
     }
 
     .article-content {
-        flex-grow: 1; /* Allow the content to grow and take up remaining space */
+        flex-grow: 1; 
         margin: 40px;
         font-size: 1rem;
         line-height: 1.6;
@@ -109,11 +109,11 @@ h3{
     }
 
 	.glitch {
-        transition: text-shadow 0.3s ease; /* Add a smooth transition for text-shadow */
+        transition: text-shadow 0.3s ease;
     }
 
     .glitch:hover {
-        animation: glitch-animation 3s infinite; /* Apply glitch animation on hover */
+        animation: glitch-animation 3s infinite;
     }
 
 }
@@ -121,14 +121,14 @@ h3{
 
 
 .author, h3 {
-    font-family: 'Courier New', monospace; /* Typewriter font with a raw edge */
+    font-family: 'Courier New', monospace; 
     font-weight: bold;
 
 }
 
-/* Adding a subtle glitch effect on hover for author and h2 */
+
 .author:hover, h3:hover {
-    color: #FF6347; /* Change color on hover for emphasis */
+    color: #FF6347; 
     text-shadow: 4px 0 #FF6347, -4px 0 #FF00FF, 0 4px #FF6347, 0 -4px #FF6347; /* Stronger glitch effect */
     transform: skew(-5deg) translateX(10px); /* Skew text to create a "broken" feel */
 }
