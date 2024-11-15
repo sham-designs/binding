@@ -17,7 +17,7 @@
 
 h1{
 	font-family: 'Anton';
-	font-size: calc(var(--base-size)*3);
+	font-size: calc(var(--base-size)*4);
 	color: #8F080C;
 	padding: 10px;
 	margin-top: 40px;
@@ -126,7 +126,7 @@ body{
 
 
 
-/* Asymmetrical blockquote styling */
+/* blockquote styling */
 blockquote {
     font-size: calc(var(--base-size) * 1.2);
     font-style: italic;
@@ -139,5 +139,22 @@ blockquote {
     position: relative;
     font-family: 'IBM Plex Mono', monospace;
     transform: rotate(-2deg);
+}
+
+
+
+/* This section is used to style h2 and h3 */
+
+h3{
+    font-family: 'Anton', sans-serif;
+    font-size: calc(var(--base-size) * 2.5);
+    color: #8F080C;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    transform: rotate(-2deg);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #938979; /* Underline to give a cut-out effect */
 }
 
