@@ -103,6 +103,7 @@ h1::after {
 
 body{
 	font-family: 'IBM Plex Mono', monospace;
+	padding-left: 12px;
 }
 
 
