@@ -18,6 +18,7 @@ line-height: 1;
     margin-top: 10px;
     margin-bottom: 10px;
     position: relative;
+    z-index: 3;
   }
   
 
@@ -34,5 +35,38 @@ line-height: 1;
     margin: 1px auto;
 }  
 
+.NotTitle-container {
+    position: relative;
+    display: inline-block; /* Keeps it aligned with text */
+}
 
+.NotTitle {
+    position: relative;
+    z-index: 2; /* Place text above the lines */
+    font-size: 3rem; /* Example, adjust as needed */
+}
 
+.skewed-lines {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1; /* Place behind the text */
+    width: 100%; /* Match text width */
+}
+
+.lines {
+    display: block;
+    height: 4px; /* Line thickness */
+    width: 120%; /* Width of the lines */
+    background-color: #DD1E26; /* Line color */
+    margin: 5px 0; /* Spacing */
+}
+
+.lines:nth-child(2) {
+    transform: skew(-5deg);
+}
+
+.lines:nth-child(3) {
+    transform: skew(-15deg);
+}
