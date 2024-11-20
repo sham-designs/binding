@@ -24,3 +24,7 @@ h1{
 	color: var(--red);
 	font-size: calc(var(--base-size)*3);
 }
+
+h2{
+	font-family: 'Anton';
+}
