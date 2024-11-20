@@ -1,14 +1,26 @@
 
+:root{
+    --base-size:16px;
+	--padding:12px;
+	--body-black:#222222;
+	--red:#DD1E26;
+	--background:#FFF8E5;
+}
 
-* {
-	
-	/* margin-top: 20; */
-	/* padding-left: 16; */
-	/* box-sizing: border-box; */
-	
+*{
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+	background-color: var(--background);
 }
 
 p{
-	padding-left: 12px;
-	padding-right: 12px;
+	font-family: 'Courier New', Courier, monospace;
+	line-height: 160%;
+	color: var(--body-black);
+}
+
+h1{
+	font-family: 'Climate Crisis';
+	color: var(--red);
+	font-size: calc(var(--base-size)*3);
 }
