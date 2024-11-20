@@ -1,0 +1,28 @@
+
+
+
+
+
+.Title{
+	font-family: 'Climate Crisis';
+	font-size: calc(var(--base-size)*4.2);
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1; 
+	}
+	
+	.NotTitle{
+		font-size: calc(var(--base-size)*2);
+		letter-spacing: 20px;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		position: relative;
+		z-index: 3;
+	  }
+	  
+	
+	  .Title, .NotTitle {
+		display: block;
+	  }
+	
