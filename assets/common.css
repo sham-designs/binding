@@ -25,6 +25,13 @@ h1{
 	font-size: calc(var(--base-size)*3);
 }
 
+cite{
+	font-family: 'Anton';
+	color: var(--red);
+	letter-spacing: 10px;
+}
+
 h2{
 	font-family: 'Anton';
 }
+
