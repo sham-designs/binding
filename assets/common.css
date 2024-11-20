@@ -18,13 +18,12 @@ p{
 	padding-left: var(--padding);
 	padding-right: var(--padding);
 	padding-top: var(--padding);
+	margin-top: var(--padding);
 }
 
 h1{
 	font-family: 'Climate Crisis';
-	color: var(--red);
-	font-size: calc(var(--base-size)*3);
-}
+	color: var(--red);}
 
 cite{
 	font-family: 'Anton';
