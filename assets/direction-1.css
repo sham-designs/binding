@@ -21,10 +21,26 @@ h1{
     margin-bottom: 0;
 }
 
+h2{
+    font-family: 'Anton';
+    color: var(--background);
+    -webkit-text-stroke: 1px #DD1E26;
+    text-align: center;
+    font-size: calc(var(--base-size)*1.8);
+    margin: var(--padding);
+}
+
+h3{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: var(--red);
+    font-weight: bold;
+}
 
 .Title {
     font-family: 'Climate Crisis';
-    font-size: calc(var(--base-size)*2.2);
+    font-size: calc(var(--base-size)*2.6);
+    letter-spacing: -3px;
     color: var(--red);
     text-align: center;
     text-transform: lowercase;
@@ -47,10 +63,29 @@ h1{
     text-align: center;
   }
 
-  cite{
-    text-align: center;
-    margin: var(--padding);
+ 
+
+    .quote{
+        font-family: 'Climate Crisis';
+        color: var(--background);
+        -webkit-text-stroke: 1px #DD1E26;
     }
 
 
-    
+    blockquote{
+        font-family: 'Anton';
+        font-size: calc(var(--base-size)*1.4);
+        text-align: left;
+        color: var(--red);
+        margin: var(--padding);
+        position: relative;
+        padding: 20px 0;
+        border-top: 8px solid var(--red);
+        border-bottom: 8px solid var(--red);
+    }
+
+    cite{
+        text-align: center;
+        margin-top: var(--padding);
+        /* margin: var(--padding); */
+        }
