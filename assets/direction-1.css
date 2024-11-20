@@ -38,12 +38,6 @@ h3{
 }
 
 .Title {
-    font-family: 'Climate Crisis';
-    font-size: calc(var(--base-size)*2.6);
-    letter-spacing: -3px;
-    color: var(--red);
-    text-align: center;
-    text-transform: lowercase;
     display: inline-block; 
     -webkit-text-stroke: 1px #FFF8E5;
     text-decoration: line-through;
@@ -72,7 +66,13 @@ h3{
     }
 
 
-    blockquote{
+    cite{
+        text-align: center;
+        margin-top: var(--padding);
+        /* margin: var(--padding); */
+        }
+
+     /* blockquote{
         font-family: 'Anton';
         font-size: calc(var(--base-size)*1.4);
         text-align: left;
@@ -82,10 +82,5 @@ h3{
         padding: 20px 0;
         border-top: 8px solid var(--red);
         border-bottom: 8px solid var(--red);
-    }
-
-    cite{
-        text-align: center;
-        margin-top: var(--padding);
-        /* margin: var(--padding); */
-        }
+    } 
+     */

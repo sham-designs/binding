@@ -1,3 +1,38 @@
 /* This is css for article 3 */
 
+.title-container {
+    text-align: center; /* Center-aligns everything */
+  }
+
+.Title{
+font-size: calc(var(--base-size)*4.2);
+margin-top: 0;
+margin-bottom: 0;
+line-height: 1; 
+}
+
+.NotTitle{
+    font-size: calc(var(--base-size)*2);
+    letter-spacing: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+  }
   
+
+  .Title, .NotTitle {
+    display: block;
+  }
+
+
+.line{
+    display: block;
+    height: calc(var(--base-size)*0.5);
+    background-color: #DD1E26;
+    width: 80%;
+    margin: 1px auto;
+}  
+
+
+
