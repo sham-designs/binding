@@ -8,8 +8,6 @@
 }
 
 *{
-	padding-left: var(--padding);
-	padding-right: var(--padding);
 	background-color: var(--background);
 }
 
@@ -17,6 +15,9 @@ p{
 	font-family: 'Courier New', Courier, monospace;
 	line-height: 160%;
 	color: var(--body-black);
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+	padding-top: var(--padding);
 }
 
 h1{
@@ -29,6 +30,7 @@ cite{
 	font-family: 'Anton';
 	color: var(--red);
 	letter-spacing: 10px;
+	padding-left: var(--padding);
 }
 
 h2{
