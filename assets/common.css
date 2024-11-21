@@ -7,7 +7,7 @@
 	--background:#FFF8E5;
 }
 
-*:not(h1) {
+section {
     background-color: var(--background); /* Replace with your desired color */
 }
 
@@ -31,6 +31,7 @@ h1{
     text-transform: lowercase;
     padding-bottom: 0;
     margin-bottom: 0;
+	background-color: var(--background);
 }
 
 
@@ -63,6 +64,8 @@ h2{
     text-align: center;
     font-size: calc(var(--base-size)*1.8);
     margin: var(--padding);
+	background-color: var(--background);
+
 }
 
 blockquote{
@@ -75,6 +78,7 @@ blockquote{
 	padding: 20px 0;
 	border-top: 8px solid var(--red);
 	border-bottom: 8px solid var(--red);
+	
 
 }
 

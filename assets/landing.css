@@ -15,7 +15,7 @@
 	margin-bottom: 0;
 	line-height: 0; 
 	color: var(--background);
-	background-color: var(--red);
+	background-color: transparent;
 	}
 
 	
@@ -27,7 +27,7 @@
 		text-align: center;
 		margin-top: 10px;
 		margin-bottom: 10px;
-		background-color: var(--red);
+		background-color: transparent;
 	  }
 	  
 .headerlines {
