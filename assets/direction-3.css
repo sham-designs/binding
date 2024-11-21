@@ -61,17 +61,25 @@ line-height: 1;
 }
 
 .lines {
-    display: block;
+    display: inline-block;
     height: 4px; /* Line thickness */
-    width: 120%; /* Width of the lines */
+    width: 80%; /* Width of the lines */
     background-color: #DD1E26; /* Line color */
-    margin: 5px 0; /* Spacing */
+    margin: 15px 0; /* Spacing */
+    opacity:20%;
+}
+
+.lines:nth-child(1) {
+    transform: rotate(5deg);
 }
 
 .lines:nth-child(2) {
-    transform: skew(-5deg);
+    transform: rotate(-2deg);
 }
 
 .lines:nth-child(3) {
-    transform: skew(-15deg);
+    transform: rotate(-5deg);
+}
+.lines:nth-child(4) {
+    transform: rotate(2deg);
 }
