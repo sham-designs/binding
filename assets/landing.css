@@ -151,14 +151,13 @@ p{
 	margin: 0;
 }
 
-
+/* Icon view for article links for smaller screens */
 
 @media (max-width: 600px) {
 	.article-links .title {
 	  display: none; 
 	}
   
-
 	.article-links {
 	  display: flex; 
 	  justify-content: space-evenly; 
@@ -193,7 +192,7 @@ p{
   
   
 
-
+/* Desktop media queries */
 
 @media (min-width: 800px) {
 	/* Header centered */
@@ -233,27 +232,27 @@ p{
 		letter-spacing: 2px; 
 	  }
   
-	/* Two-Column Layout for Articles and Paragraph */
+
 	.content-wrapper {
-		display: flex; /* Use flexbox for horizontal layout */
-		flex-direction: row; /* Align items in a row */
-		justify-content: space-between; /* Space out the two sections */
-		align-items: flex-start; /* Align items to the top */
-		margin: calc(var(--padding) * 2) auto; /* Add spacing and center */
-		gap: calc(var(--padding) * 2); /* Add space between sections */
+		display: flex;
+		flex-direction: row; 
+		justify-content: space-between; 
+		align-items: flex-start; 
+		margin: calc(var(--padding) * 2) auto; 
+		gap: calc(var(--padding) * 2); 
 	  }
 	
 	  .text-content {
-		flex: 1; /* Take up two-thirds of the space */
-		max-width: 40%; /* Adjust width for better readability */
-		padding-right: calc(var(--padding) * 2); /* Add spacing */
-		line-height: 1.6; /* Improve readability */
+		flex: 1; 
+		max-width: 40%; 
+		padding-right: calc(var(--padding) * 2); 
+		line-height: 1.6;
 	  }
 	
 	  .article-links {
-		flex: 2; /* Take up one-third of the space */
-		max-width: 55%; /* Limit width for better balance */
-		margin-left: calc(var(--padding) * 2); /* Add spacing */
+		flex: 2; 
+		max-width: 55%; 
+		margin-left: calc(var(--padding) * 2); 
 	  }
 
 	  .article-links .title {
@@ -269,7 +268,7 @@ p{
 	}
 
 p{
-	/* max-width: 40vw; */
+
 	margin-left: calc(var(--padding)*3);
 	font-size: 20px;
 }
