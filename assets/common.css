@@ -7,9 +7,10 @@
 	--background:#FFF8E5;
 }
 
-*{
-	background-color: var(--background);
+*:not(h1) {
+    background-color: var(--background); /* Replace with your desired color */
 }
+
 
 p{
 	font-family: 'Courier New', Courier, monospace;
