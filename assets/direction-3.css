@@ -1,5 +1,10 @@
 /* This is css for article 3 */
 
+
+header{
+    background-color: var(--background);
+}
+
 .title-container {
     text-align: center; /* Center-aligns everything */
   }

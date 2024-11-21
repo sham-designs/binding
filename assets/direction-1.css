@@ -9,6 +9,9 @@
 	--background:#FFF8E5;
 }
 
+header{
+    background-color: var(--background);
+}
 
 h1{
     font-family: 'Anton';

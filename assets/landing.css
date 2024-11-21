@@ -1,28 +1,33 @@
 
+.LandingHeader{
+	background: var(--red);
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+	padding-top: calc(var(--padding)*2);
+	padding-bottom: calc(var(--padding)*2);
+}
 
 
-
-
-.Title{
+.FirstTitle{
 	font-family: 'Climate Crisis';
 	font-size: calc(var(--base-size)*4.2);
 	margin-top: 0;
 	margin-bottom: 0;
-	line-height: 1; 
+	line-height: 0; 
+	color: var(--background);
+	background-color: none;
 	}
+
 	
-	.NotTitle{
-		font-size: calc(var(--base-size)*2);
-		letter-spacing: 20px;
+.MiddleTitle{
+		font-family: 'Anton';
+		font-size: calc(var(--base-size)*1.4);
+		line-height: 1; 
+		letter-spacing: 8px;
 		text-align: center;
 		margin-top: 10px;
 		margin-bottom: 10px;
-		position: relative;
-		z-index: 3;
 	  }
 	  
 	
-	  .Title, .NotTitle {
-		display: block;
-	  }
 	
