@@ -53,7 +53,8 @@ h1{
 cite{
 	font-family: 'Anton';
 	color: var(--red);
-	letter-spacing: 10px;
+	letter-spacing: 12px;
+    text-align: center;
 }
 
 h2{

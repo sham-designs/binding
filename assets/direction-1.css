@@ -73,20 +73,23 @@ h3{
 
  
 
-    .quote{
+ .quote{
         font-family: 'Climate Crisis';
         color: var(--background);
         -webkit-text-stroke: 1px #DD1E26;
     }
 
 
-    cite{
+ cite{
+        display: block;
         text-align: center;
-        margin-top: var(--padding);
-        /* margin: var(--padding); */
-        }
+        margin-top: calc(var(--base-size)*0.8);
+        margin-bottom: calc(var(--base-size)*0.8);
+        line-height: 0.3;
 
-        blockquote{
+ }
+
+blockquote{
             position: relative;
             font-family: 'Anton';
             font-size: calc(var(--base-size)*1.4);
@@ -96,20 +99,29 @@ h3{
             position: relative;
             padding: 20px 0;   
             margin-top: 80px;  
-        }
+ }
 
-        .big-quote {
+ .big-quote {
             position: absolute; 
             top: -90px; 
             left: -1px;
             font-size: calc(var(--base-size)*10);
             color: var(--red); 
             font-family: 'Anton'; 
-          }
+ }
           
 
 
+
+/* Starting my desktop media queries */
+
      @media (min-width: 800px) {
+
+        h1{
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+
       .Title{
         font-size: calc(var(--base-size)*6);
       }
@@ -122,5 +134,17 @@ h3{
       .NotTitle{
         font-size: calc(var(--base-size)*4.5);
       }
+
+      cite{
+        font-size: calc(var(--base-size)*2.4);
+        letter-spacing: 22px;
+        line-height: 0.2;
+      }
+p{
+    font-size: 20px;
+    margin-top: 120px;
+    width: 50vw;
+}
+
 
      }
