@@ -153,6 +153,48 @@ p{
 
 
 
+@media (max-width: 600px) {
+	.article-links .title {
+	  display: none; 
+	}
+  
+
+	.article-links {
+	  display: flex; 
+	  justify-content: space-evenly; 
+	  align-items: center; 
+	  position: sticky; 
+	  bottom: 0; 
+	  background-color: #FFF8E5; 
+	  padding: 0.5rem 0;
+	  z-index: 10; 
+	  width: 100%;
+	}
+  
+
+	.article-links li {
+	  display: inline-flex; 
+	  justify-content: center;
+	  align-items: center;
+	  flex: 1; 
+	  padding: 0; 
+	  margin: 0; 
+	  border: none; 
+	}
+  
+	.article-links .icon1,
+	.article-links .icon2,
+	.article-links .icon3 {
+	  font-size: 4rem; 
+	  width: fit-content; 
+	  height: auto; 
+	}
+  }
+  
+  
+
+
+
 @media (min-width: 800px) {
 	/* Header centered */
 	.LandingHeader {
