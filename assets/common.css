@@ -71,3 +71,33 @@ h2{
 
 
 
+.nav-button {
+    position: absolute;
+    top: 20px;
+    width: 90px; /* Button size */
+    height: 90px;
+    background-color: var(--red); 
+    color: var(--background);
+    font-family: 'Climate Crisis';
+    font-size: 60px;
+    line-height: 90px;
+    text-align: center;
+    border: none;
+    border-radius: 0px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 10;
+    display: none; /* Dont want this on mobile yet */
+  }
+
+  .home-button {
+    left: 20px; 
+  }
+  
+  .next-button {
+    right: 20px; 
+  }
+
+
+.nav-button:hover {
+    transform: scale(1.1);
+  }

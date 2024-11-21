@@ -57,3 +57,12 @@ h1{
     text-align: center;
   }
 
+
+
+  @media (min-width: 800px) {
+    /* navigation button on desktop only */
+  .nav-button {
+    display: block; 
+  }
+
+  }

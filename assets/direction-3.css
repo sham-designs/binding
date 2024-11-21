@@ -86,3 +86,15 @@ line-height: 1;
 .lines:nth-child(4) {
     transform: rotate(2deg);
 }
+
+
+
+
+
+@media (min-width: 800px) {
+    /* navigation button on desktop only */
+  .nav-button {
+    display: block; 
+  }
+
+  }
