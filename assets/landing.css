@@ -169,13 +169,27 @@ p{
 	.FirstTitle {
 	  font-size: calc(var(--base-size) * 12); /* Scale up */
 	  line-height: 0.4;
+	  display: inline-block;
+	  transition: transform 0.5s ease;
 	}
   
+	.FirstTitle:hover {
+		transform: rotate(-5deg); /* Slight rotation */
+	  }
+
+
 	.MiddleTitle {
+	  display:inline-block;
 	  font-size: calc(var(--base-size) * 4);
 	  letter-spacing:calc(var(--base-size) * 2);
 	  text-align: center; /* Keep text centered */
+	  transition: letter-spacing 0.5s ease;
+	  font-weight: 100;
 	}
+
+	.MiddleTitle:hover {
+		letter-spacing: 2px; 
+	  }
   
 	/* Two-Column Layout for Articles and Paragraph */
 	.content-wrapper {
@@ -215,6 +229,7 @@ p{
 p{
 	/* max-width: 40vw; */
 	margin-left: calc(var(--padding)*3);
+	font-size: 20px;
 }
 
   }
