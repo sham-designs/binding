@@ -223,15 +223,27 @@ p{
 	  display:inline-block;
 	  font-size: calc(var(--base-size) * 4);
 	  letter-spacing:calc(var(--base-size) * 2);
-	  text-align: center; /* Keep text centered */
-	  transition: letter-spacing 0.5s ease;
+	  text-align: center; 
+	  /* transition: letter-spacing 0.5s ease; */
+	  animation: letterSpacingLoop 4s infinite ease-in-out;
 	  font-weight: 100;
 	}
 
-	.MiddleTitle:hover {
+	@keyframes letterSpacingLoop {
+		0% {
+		  letter-spacing: calc(var(--base-size) * 2); /* Original spacing */
+		}
+		50% {
+		  letter-spacing: 2px; /* Tight spacing */
+		}
+		100% {
+		  letter-spacing: calc(var(--base-size) * 2); /* Back to original spacing */
+		}
+	}
+	/* .MiddleTitle:hover {
 		letter-spacing: 2px; 
 	  }
-  
+   */
 
 	.content-wrapper {
 		display: flex;

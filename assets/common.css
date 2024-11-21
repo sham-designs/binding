@@ -67,18 +67,6 @@ h2{
 
 }
 
-blockquote{
-	font-family: 'Anton';
-	font-size: calc(var(--base-size)*1.4);
-	text-align: left;
-	color: var(--red);
-	margin: var(--padding);
-	position: relative;
-	padding: 20px 0;
-	border-top: 8px solid var(--red);
-	border-bottom: 8px solid var(--red);
 
-
-}
 
 
