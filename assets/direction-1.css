@@ -140,11 +140,100 @@ blockquote{
         letter-spacing: 22px;
         line-height: 0.2;
       }
-p{
-    font-size: 20px;
-    margin-top: 120px;
-    width: 50vw;
-}
 
+
+p {
+    font-size: 20px;
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 20px;
+    width: 50vw; /* Limit the width to half the viewport */
+  }
+
+  p:nth-child(1){
+    margin-top: 120px;
+  }
+
+
+  blockquote {
+    font-family: 'Anton';
+    font-size: calc(var(--base-size) * 2.2);
+    line-height: 1.6;
+    text-align: left; 
+    color: var(--red);
+    width: 60vw; 
+    margin: 0;
+    position: relative;
+    margin-top: 100px;
+    margin-left: 80px;
+    display: inline-block;
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    border-left: 10px solid transparent;
+    padding-left: 20px;
+    transition: border-color 0.8s ease-in-out;
+  }
+
+  /* blockquote:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 5px 15px rgba(254, 233, 233, 0.2); 
+  } */
+  blockquote:hover {
+    border-left-color: var(--red); 
+    /* transform: scale(1.1); */
+  }
+.quote{
+    font-size: calc(var(--base-size) * 2);
+    line-height: 1.6;
+    text-align: left;
+}
+/* 
+  .big-quote {
+    font-size: calc(var(--base-size) * 10);
+    color: var(--red);
+    position: absolute;
+    top: -90px;
+    left: 0px;
+    transition: transform 1s ease;
+  } */
+
+  .big-quote{
+    display: none;
+  }
+ 
+  blockquote:hover .big-quote {
+    /* transform: scale(1.6);  */
+    display: none;
+  }
+
+  /* other headings for desktop */
+  h2 {
+    font-family: 'Anton';
+    color: var(--background);
+    -webkit-text-stroke: 1px #DD1E26;
+    text-align: center;
+    font-size: calc(var(--base-size) * 3);
+    margin: var(--padding) auto;
+    width: 50vw; 
+    /* display: inline-block; */
+    transition: transform 0.5s ease;
+    /* if I want to make h2 sticky */
+        /* position: sticky;
+        top: 0;
+        z-index: 10; */
+  }
+
+  h2:hover {
+    transform: scaleX(1.2);
+    color: var(--red);
+  }
+
+  h3 {
+    font-family: 'Courier Prime', Courier, monospace;
+    font-size: calc(var(--base-size) * 1.8);
+    text-align: center;
+    color: var(--red);
+    font-weight: bold;
+    margin: var(--padding) auto;
+    width: 50vw; /* Center and constrain width */
+  }
 
      }
