@@ -79,6 +79,7 @@ body {
     line-height: 1.6;
     color: var(--background);
     padding: calc(var(--padding) * 2);
+	margin-bottom: 200px;
 }
 
 .text-content p {
@@ -147,17 +148,22 @@ body {
 }
 
 .article-links .icon2 {
-    font-family: 'Climate Crisis', sans-serif;
-    font-size: 140px; 
-	margin-top: 100px;
+	font-family: 'Climate Crisis', sans-serif;
+	line-height: 0;
+    font-size: 140px;
+	text-decoration: underline;
+	text-underline-offset: 50px;
+	/* box-shadow: 3px 0px 0 #DD1E26; */
+	line-height: 0;
     margin-right: 15px; 
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #DD1E26; 
-    color: var(--background);
-    width: 160px; 
-    height: 200px; 
+	background-color: var(--background);
+	color: var(--background);
+	-webkit-text-stroke: 2px #DD1E26;
+    width: 60px; 
+    height: 60px; 
     text-align: center;
 	transition: all 0.3s ease; 
 }
@@ -165,7 +171,8 @@ body {
 .article-links .icon3 {
     font-family: 'Climate Crisis', sans-serif;
     font-size: 140px;
-	/* text-decoration: overline; */
+	text-decoration: overline;
+	text-overline-offset: 0px;
 	box-shadow: 3px 0px 0 #DD1E26;
 	line-height: 0;
     margin-right: 15px; 
@@ -197,9 +204,9 @@ body {
     text-align: center;
     font-family: 'Courier New', monospace;
     font-size: 32px;
-    color: var(--background);
-    background-color: black;
-	box-shadow: 2px 2px 6px rgba(109, 109, 109, 0.2); /* Added shadow */
+    color: var(--red);
+    background-color: var(--background);
+	/* box-shadow: 2px 2px 6px rgba(109, 109, 109, 0.2);  */
     padding: 5px 10px;
     /* border-radius: 5px; */
     opacity: 0; /* Hidden by default */
@@ -234,15 +241,15 @@ body {
     position: relative;
     opacity: 0; /* Hide initially */
     display: block; /* Ensure they behave like block elements */
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-    color: #fff; /* Make the text readable */
+    /* background-color: rgba(0, 0, 0, 0.8);  */
+    color: var(--red);
     width: 30vw; /* Full viewport width */
     padding: 10px 20px; /* Add spacing for better appearance */
     text-align: center; /* Center the text */
     transition: all 0.3s ease; /* Smooth transition */
     margin: 5px auto; /* Small margin for spacing */
     left: 50%; /* Center alignment */
-    transform: translateX(-50%) translateY(-10%); /* Adjust positioning */
+    transform: translateX(-50%) translateY(20%); /* Adjust positioning */
 }
 
 .article-links a:hover .title,
