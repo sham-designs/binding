@@ -46,7 +46,7 @@ body {
         line-height: 0.4;
         display: inline-block;
         transition: all 0.5s ease; /* Smooth transitions for all properties */
-        color: #fff; /* Filled color */
+        color: var(--background);
         text-decoration: none; /* Default state */
         font-weight: bold;
         -webkit-text-stroke: 0px; /* Default no stroke */
@@ -59,22 +59,22 @@ body {
 	/* Keyframes for Sequential Styling */
 	@keyframes sequentialStyling {
 		0% {
-			color: #fff; /* Filled text */
+			color: var(--background); 
 			-webkit-text-stroke: 0px;
 			text-decoration: none;
 		}
 		33% {
 			color: transparent; /* Stroke only */
-			-webkit-text-stroke: 1px #fff;
+			-webkit-text-stroke: 1px #FFF8E5;
 			text-decoration: none;
 		}
 		66% {
-			color: #fff; /* Underline only */
+			color: #FFF8E5; 
 			-webkit-text-stroke: 0px;
 			text-decoration: underline;
 		}
 		100% {
-			color: transparent; /* Stroke + Underline */
+			color: var(--background); 
 			text-decoration: overline;
 		}
 	}
