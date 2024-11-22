@@ -1,0 +1,254 @@
+/* Global Styles */
+body {
+    background: var(--background);
+    font-family: 'Anton', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.LandingHeader {
+    background: var(--red);
+    padding: calc(var(--padding) * 2) var(--padding);
+    text-align: center;
+}
+
+.FirstTitle {
+    font-family: 'Climate Crisis';
+    font-size: calc(var(--base-size) * 4.2);
+    margin: 0;
+    color: var(--background);
+}
+
+.MiddleTitle {
+    font-family: 'Anton';
+    font-size: calc(var(--base-size) * 1.4);
+    letter-spacing: 8px;
+    margin: 10px 0;
+    text-align: center;
+    color: var(--background);
+}
+
+/* Header Animations */
+@media (min-width: 800px) {
+    .LandingHeader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: calc(var(--padding) * 10);
+        padding-bottom: calc(var(--padding) * 10);
+    }
+
+    .FirstTitle {
+        font-size: calc(var(--base-size) * 12);
+        line-height: 0.4;
+        display: inline-block;
+        transition: transform 0.5s ease;
+    }
+
+    .FirstTitle:hover {
+        transform: rotate(-5deg);
+    }
+
+    .MiddleTitle {
+        display: inline-block;
+        font-size: calc(var(--base-size) * 4);
+        letter-spacing: calc(var(--base-size) * 2);
+        animation: letterSpacingLoop 4s infinite ease-in-out;
+    }
+
+    @keyframes letterSpacingLoop {
+        0% {
+            letter-spacing: calc(var(--base-size) * 2);
+        }
+        50% {
+            letter-spacing: 2px;
+        }
+        100% {
+            letter-spacing: calc(var(--base-size) * 2);
+        }
+    }
+}
+
+/* Centered Paragraph */
+.text-content {
+    max-width: 50vw;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.6;
+    color: var(--background);
+    padding: calc(var(--padding) * 2);
+}
+
+.text-content p {
+    font-size: 20px;
+    margin: calc(var(--padding) * 1.5) 0;
+}
+
+
+
+
+/* Global Styles */
+body {
+    background: var(--background);
+    font-family: 'Anton', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Article Links Section */
+.article-links {
+    display: flex; 
+    justify-content: space-evenly; 
+    gap: 0; 
+    width: 100%; 
+    margin-top: 50px;
+    padding: 0;
+    max-width: 1200px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.article-links ol {
+    padding: 0; /* Remove list padding */
+    margin: 0; /* Remove list margin */
+    display: flex;
+	justify-content: center;
+    gap: 200px; 
+    width: 100%; /* List spans full width */
+}
+
+.article-links li {
+    list-style: none; /* Remove bullets */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* Adjust icon size (larger for visibility) */
+    height: 200px;
+}
+
+/* Icon Styles */
+.article-links .icon1 {
+    font-family: 'Climate Crisis', sans-serif; /* Use your preferred font */
+    font-size: 140px; /* Size of the "g" icon */
+	text-decoration: line-through;
+	-webkit-text-stroke: 1px #FFF8E5;
+    margin-right: 15px; /* Space between the icon and the text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    color: var(--red);
+    width: 60px; /* Icon box width */
+    height: 60px; /* Icon box height */
+    text-align: center;
+	transition: all 0.3s ease; 
+}
+
+.article-links .icon2 {
+    font-family: 'Climate Crisis', sans-serif;
+    font-size: 140px; 
+	margin-top: 100px;
+    margin-right: 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DD1E26; 
+    color: var(--background);
+    width: 160px; 
+    height: 200px; 
+    text-align: center;
+	transition: all 0.3s ease; 
+}
+
+.article-links .icon3 {
+    font-family: 'Climate Crisis', sans-serif;
+    font-size: 140px;
+	/* text-decoration: overline; */
+	box-shadow: 3px 0px 0 #DD1E26;
+	line-height: 0;
+    margin-right: 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	background-color: var(--background);
+    color: var(--red);
+    width: 60px; 
+    height: 60px; 
+    text-align: center;
+	transition: all 0.3s ease; 
+}
+
+
+
+
+/* Hover Effect for Icon */
+.icon1:hover, .icon2:hover, .icon3:hover {
+    transform: scale(1.2);
+}
+
+/* Base styles for title and description */
+.title, .description {
+    position: absolute; /* Position relative to the icon */
+    top: 100%; /* Start just below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-size: 32px;
+    color: var(--background);
+    background-color: black;
+	box-shadow: 2px 2px 6px rgba(109, 109, 109, 0.2); /* Added shadow */
+    padding: 5px 10px;
+    /* border-radius: 5px; */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none; /* Prevent interaction */
+	z-index: 10;
+}
+
+.title{
+	font-family: 'Anton';
+}
+/* Show Title and Description on Hover */
+.icon1:hover ~ .title, 
+.icon1:hover ~ .description,
+.icon2:hover ~ .title, 
+.icon2:hover ~ .description,
+.icon3:hover ~ .title, 
+.icon3:hover ~ .description {
+    opacity: 1; /* Make them visible */
+    transform: translateX(-50%) translateY(-80%); 
+}
+
+/* Adjust positioning for the description */
+.description {
+    margin-top: 50px;
+    font-size: 24px; 
+}
+
+
+.article-links a .title,
+.article-links a .description {
+    position: relative;
+    opacity: 0; /* Hide initially */
+    display: block; /* Ensure they behave like block elements */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: #fff; /* Make the text readable */
+    width: 30vw; /* Full viewport width */
+    padding: 10px 20px; /* Add spacing for better appearance */
+    text-align: center; /* Center the text */
+    transition: all 0.3s ease; /* Smooth transition */
+    margin: 5px auto; /* Small margin for spacing */
+    left: 50%; /* Center alignment */
+    transform: translateX(-50%) translateY(-10%); /* Adjust positioning */
+}
+
+.article-links a:hover .title,
+.article-links a:hover .description {
+    opacity: 1; /* Show on hover */
+    transform: translateX(-50%) translateY(0); /* Adjust positioning closer to the icon */
+}
+
+

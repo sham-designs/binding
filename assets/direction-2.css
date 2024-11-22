@@ -8,6 +8,9 @@
 	--red:#DD1E26;
 	--background:#FFF8E5;
 }
+body{
+    background-color: var(--background);
+}
 
 header{
     background-color: var(--background);
@@ -50,6 +53,7 @@ h1{
 
    .Title2 {
 	transform: rotate(5deg);
+    margin-bottom: calc(var(--base-size)*2);
    }
 
    .NotTitle{
@@ -58,7 +62,9 @@ h1{
   }
 
 
-
+cite{
+display: block;
+}
   @media (min-width: 800px) {
     /* navigation button on desktop only */
   .nav-button {
