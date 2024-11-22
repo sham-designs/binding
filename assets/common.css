@@ -7,13 +7,13 @@
 	--background:#FFF8E5;
 }
 
-section {
-    background-color: var(--background); /* Replace with your desired color */
+body {
+    background-color: var(--background); 
 }
 
 
 p{
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Courier Prime', monospace;
 	line-height: 160%;
 	color: var(--body-black);
 	padding-left: var(--padding);

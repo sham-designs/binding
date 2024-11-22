@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     background: var(--background);
-    font-family: 'Anton', sans-serif;
+    /* font-family: 'Anton', sans-serif; */
     margin: 0;
     padding: 0;
 }
@@ -219,7 +219,7 @@ body {
 
  @media (min-width: 600px) {
 
-/* Centered Paragraph */
+
 .text-content {
     max-width: 50vw;
     margin: 0 auto;
@@ -258,30 +258,30 @@ body {
 }
 
 .article-links ol {
-    padding: 0; /* Remove list padding */
-    margin: 0; /* Remove list margin */
+    padding: 0; 
+    margin: 0; 
     display: flex;
 	justify-content: center;
     gap: 200px; 
-    width: 100%; /* List spans full width */
+    width: 100%; 
 }
 
 .article-links li {
-    list-style: none; /* Remove bullets */
+    list-style: none; 
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px; /* Adjust icon size (larger for visibility) */
+    width: 200px;
     height: 200px;
 }
 
 /* Icon Styles */
 .article-links .icon1 {
-    font-family: 'Climate Crisis', sans-serif; /* Use your preferred font */
-    font-size: 140px; /* Size of the "g" icon */
+    font-family: 'Climate Crisis', sans-serif; 
+    font-size: 140px; 
 	text-decoration: line-through;
 	-webkit-text-stroke: 1px #FFF8E5;
-    margin-right: 15px; /* Space between the icon and the text */
+    margin-right: 15px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -351,7 +351,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    font-family: 'Courier New', monospace;
+    font-family: 'Courier Prime', monospace;
     font-size: 32px;
     color: var(--red);
     background-color: var(--background);
