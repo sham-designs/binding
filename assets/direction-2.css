@@ -72,3 +72,34 @@ display: block;
   }
 
   }
+
+
+
+  .quote-container {
+    width: fit-content;
+    background-color: var(--background);
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  blockquote {
+    font-family: "Courier Prime", monospace; /* or your preferred font */
+    font-size:var(--base-size);
+    line-height: 1.6;
+    color:var(--red);
+    margin: var(--padding);
+  }
+  
+  .top-bar,
+  .bottom-bar {
+    height: 10px; /* Adjust the height to match your design */
+    background-color: var(--red);
+    margin: 0 auto;
+    width: 100%; /* Matches the width of the container */
+    transform: rotate(-5deg);
+  }
+  
+  .bottom-bar{
+    transform: rotate(5deg);
+  }
