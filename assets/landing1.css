@@ -40,16 +40,44 @@ body {
         padding-bottom: calc(var(--padding) * 10);
     }
 
-    .FirstTitle {
+
+	.FirstTitle {
         font-size: calc(var(--base-size) * 12);
         line-height: 0.4;
         display: inline-block;
-        transition: transform 0.5s ease;
+        transition: all 0.5s ease; /* Smooth transitions for all properties */
+        color: #fff; /* Filled color */
+        text-decoration: none; /* Default state */
+        font-weight: bold;
+        -webkit-text-stroke: 0px; /* Default no stroke */
     }
 
-    .FirstTitle:hover {
-        transform: rotate(-5deg);
-    }
+	.FirstTitle:hover {
+		animation: sequentialStyling 3s linear alternate; /* Runs keyframes */
+	}
+	
+	/* Keyframes for Sequential Styling */
+	@keyframes sequentialStyling {
+		0% {
+			color: #fff; /* Filled text */
+			-webkit-text-stroke: 0px;
+			text-decoration: none;
+		}
+		33% {
+			color: transparent; /* Stroke only */
+			-webkit-text-stroke: 1px #fff;
+			text-decoration: none;
+		}
+		66% {
+			color: #fff; /* Underline only */
+			-webkit-text-stroke: 0px;
+			text-decoration: underline;
+		}
+		100% {
+			color: transparent; /* Stroke + Underline */
+			text-decoration: overline;
+		}
+	}
 
     .MiddleTitle {
         display: inline-block;
