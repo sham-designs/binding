@@ -71,6 +71,154 @@ body {
     }
 }
 
+
+
+
+
+
+/* Icon view for article links for smaller screens */
+
+@media (max-width: 600px) {
+
+
+	/* Article links */
+	.article-links {
+		background-color: var(--background); /* Background similar to the screenshot */
+	}
+	
+	.article-links ol {
+		list-style: none; 
+		margin: 0;
+		padding: 0;
+	}
+	
+	.article-links li {
+		display: flex; /* Flexbox to align icon and title horizontally */
+		align-items: center;
+		border: 2px solid #DD1E26; /* Red border around each item */
+		/* margin-bottom: 15px;  */
+		padding-top: 0px;
+		padding-bottom:0px;
+		padding-right: 2px;
+		padding-left: 0px;
+	
+	}
+	
+	.article-links li:last-child {
+		margin-bottom: 0; /* Remove margin for the last item */
+	}
+	
+	.article-links a {
+		display: flex; /* Flexbox for icon and text alignment */
+		align-items: center;
+		text-decoration: none; /* Remove underline from links */
+		color: #DD1E26; /* Red text color */
+		width: 100%; /* Ensure the link spans the entire item */
+	}
+	
+	.article-links .icon1 {
+		font-family: 'Climate Crisis', sans-serif; /* Use your preferred font */
+		font-size: 40px; /* Size of the "g" icon */
+		text-decoration: line-through;
+		-webkit-text-stroke: 1px #FFF8E5;
+		margin-right: 15px; /* Space between the icon and the text */
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--background);
+		color: var(--red);
+		width: 60px; /* Icon box width */
+		height: 60px; /* Icon box height */
+		text-align: center;
+	}
+	
+	.article-links .icon2 {
+		font-family: 'Climate Crisis', sans-serif;
+		font-size: 40px; 
+		margin-right: 15px; 
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #DD1E26; 
+		color: #F4F2E9;
+		width: 60px; 
+		height: 60px; 
+		text-align: center;
+	}
+	
+	.article-links .icon3 {
+		font-family: 'Climate Crisis', sans-serif;
+		font-size: 40px;
+		/* text-decoration: overline; */
+		box-shadow: 3px 0px 0 #DD1E26;
+		line-height: 0;
+		margin-right: 15px; 
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--background);
+		color: var(--red);
+		width: 60px; 
+		height: 60px; 
+		text-align: center;
+	}
+	
+	
+	
+	
+	.article-links .title {
+		font-family: 'Anton';
+		color: var(--background);
+		-webkit-text-stroke: 1px #DD1E26;
+		font-size: calc(var(--base-size)*1.2);
+		line-height: 1.4;
+	}
+
+
+	.article-links .title {
+	  display: none; 
+	}
+	.article-links .description {
+		display: none;
+	}
+	.article-links {
+	  display: flex; 
+	  justify-content: space-evenly; 
+	  align-items: center; 
+	  position: sticky; 
+	  bottom: 0; 
+	  background-color: #FFF8E5; 
+	  padding: 0.5rem 0;
+	  z-index: 10; 
+	  width: 100%;
+	}
+  
+
+	.article-links li {
+	  display: inline-flex; 
+	  justify-content: center;
+	  align-items: center;
+	  flex: 1; 
+	  padding: 0; 
+	  margin: 0; 
+	  border: none; 
+	}
+  
+	.article-links .icon1,
+	.article-links .icon2,
+	.article-links .icon3 {
+	  font-size: 4rem; 
+	  width: fit-content; 
+	  height: auto; 
+	}
+  }
+  
+
+/* DESKTOP MEDIA QUERIES */
+
+
+ @media (min-width: 600px) {
+
 /* Centered Paragraph */
 .text-content {
     max-width: 50vw;
@@ -89,8 +237,6 @@ body {
 
 
 
-
-/* Global Styles */
 body {
     background: var(--background);
     font-family: 'Anton', sans-serif;
@@ -190,6 +336,9 @@ body {
 
 
 
+
+
+
 /* Hover Effect for Icon */
 .icon1:hover, .icon2:hover, .icon3:hover {
     transform: scale(1.2);
@@ -258,4 +407,5 @@ body {
     transform: translateX(-50%) translateY(0); /* Adjust positioning closer to the icon */
 }
 
+  }
 

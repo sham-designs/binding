@@ -158,6 +158,10 @@ p{
 	.article-links .title {
 	  display: none; 
 	}
+
+	.article-links .description {
+		display: none;
+	}
   
 	.article-links {
 	  display: flex; 
