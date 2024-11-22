@@ -53,7 +53,7 @@ body {
     }
 
 	.FirstTitle:hover {
-		animation: sequentialStyling 3s linear alternate; /* Runs keyframes */
+		animation: sequentialStyling 3s steps(3) alternate; /* Runs keyframes */
 	}
 	
 	/* Keyframes for Sequential Styling */
