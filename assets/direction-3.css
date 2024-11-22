@@ -88,9 +88,12 @@ line-height: 1;
 }
 
 
+cite{
+    display: block;
+    }
+    
 
-
-
+/* DESKTOP QUERIES */
 @media (min-width: 800px) {
     /* navigation button on desktop only */
   .nav-button {

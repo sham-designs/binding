@@ -65,13 +65,6 @@ h1{
 cite{
 display: block;
 }
-  @media (min-width: 800px) {
-    /* navigation button on desktop only */
-  .nav-button {
-    display: block; 
-  }
-
-  }
 
 
 
@@ -102,4 +95,16 @@ display: block;
   
   .bottom-bar{
     transform: rotate(5deg);
+  }
+
+
+
+/* DESKTOP QUERIES */
+
+  @media (min-width: 800px) {
+    /* navigation button on desktop only */
+  .nav-button {
+    display: block; 
+  }
+
   }
