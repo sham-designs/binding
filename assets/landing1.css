@@ -29,6 +29,10 @@ body {
     color: var(--background);
 }
 
+
+
+
+
 /* Header Animations */
 @media (min-width: 800px) {
     .LandingHeader {
