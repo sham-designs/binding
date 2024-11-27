@@ -107,6 +107,129 @@ display: block;
     display: block; 
   }
 
+  header {
+    position: relative;
+    text-align: center;
+    margin: 50px auto;
+  }
+
+  /* Main Title */
+h1 {
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+  font-size: 28px; /* Adjust for subtitle */
+  color: #DD1E26;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Subtitle ('There is no such thing as') */
+.NotTitle {
+  font-size: 70px;
+  letter-spacing: 3px;
+  text-transform: lowercase;
+  -webkit-text-stroke: 2px #DD1E26; /* Red outline */
+  color: transparent;
+  margin-bottom: 20px;
+}
+
+/* Main Title Blocks ('Neutral', 'Graphic Design') */
+.Title1, .Title2 {
+  font-family: 'Climate Crisis', sans-serif;
+  font-size: 100px;
+  color: #FFF9F4;
+  background-color: #DD1E26;
+  text-align: center;
+  padding: 10px 40px;
+  display: inline-block;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Title1 {
+  transform: rotate(-8deg); /* Tilt for 'Neutral' */
+}
+
+.Title2 {
+  transform: rotate(8deg); /* Tilt for 'Graphic Design' */
+  margin-bottom: 20px;
+}
+
+
+@keyframes stamp-effect-title1 {
+  0% {
+    transform: rotate(-7deg) translateY(-50px); /* Starts off-screen above */
+    -webkit-text-stroke: 2px #DD1E26; /* Red stroke only */
+    color: transparent; /* No fill */
+    background-color: transparent; /* No background */
+  }
+  20% {
+    transform: rotate(-7deg) translateY(0) scale(1.05); /* Slight squash as it lands */
+    -webkit-text-stroke: 0; /* Remove stroke */
+    color: #FFF; /* White text */
+    background-color: #DD1E26; /* Red background */
+  }
+  100% {
+    transform: rotate(-7deg) translateY(0); /* Stay in final position */
+    -webkit-text-stroke: 0;
+    color: #FFF;
+    background-color: #DD1E26;
+  }
+}
+
+@keyframes stamp-effect-title2 {
+  0% {
+    transform: rotate(8deg) translateY(-50px); /* Starts off-screen above */
+    -webkit-text-stroke: 2px #DD1E26; /* Red stroke only */
+    color: transparent; /* No fill */
+    background-color: transparent; /* No background */
+  }
+  20% {
+    transform: rotate(8deg) translateY(0) scale(1.05); /* Slight squash as it lands */
+    -webkit-text-stroke: 0; /* Remove stroke */
+    color: #FFF; /* White text */
+    background-color: #DD1E26; /* Red background */
+  }
+  100% {
+    transform: rotate(8deg) translateY(0); /* Stay in final position */
+    -webkit-text-stroke: 0;
+    color: #FFF;
+    background-color: #DD1E26;
+  }
+}
+
+/* Apply animations */
+.Title1 {
+  animation: stamp-effect-title1 2s steps(1, end) infinite;
+  display: inline-block;
+}
+
+.Title2 {
+  animation: stamp-effect-title2 2s steps(1, end) infinite;
+  animation-delay: 0.5s; /* Staggered for variation */
+  display: inline-block;
+}
+
+
+
+
+
+
+/* Author and Date (Cite) */
+cite {
+  font-family: 'Anton', sans-serif;
+  font-size: 28px;
+  color: #DD1E26;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-top: 10px;
+}
+
+
+
+
 
   p {
     font-size: 20px;
@@ -122,45 +245,39 @@ display: block;
 
 
 
-/* Pull-quote container */
 .pull-quote {
   position: relative;
-  text-align: center;
+  text-align: left;
   margin: 50px 0;
-  width: 80vw;
-  transform: rotate(-5deg); /* Initial tilt for the poster vibe */
-  transition: transform 0.3s ease; /* Smooth tilt correction */
+  margin-left: 60px;
+  width: 70vw;
+  transform: rotate(-5deg); 
+  transition: transform 0.3s ease; 
 }
 
-/* Blockquote styling */
+
 .pull-quote blockquote {
   font-family: 'Anton';
-  font-size: 4rem; /* Poster-size font */
+  font-size: 3rem; 
   line-height: 1.2;
-  color: transparent; /* Start with transparent text */
-  -webkit-text-stroke: 2px #DD1E26; /* Red outline for poster style */
-  text-transform: uppercase; /* Poster-like emphasis */
-  letter-spacing: 2px; /* Slight spacing for clarity */
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions for text and rotation */
+  color: transparent; 
+  -webkit-text-stroke: 2px #DD1E26; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  transition: color 0.3s ease, transform 0.3s ease; 
   margin: 0;
   padding: 0;
 }
 
-/* Hover effect */
 .pull-quote:hover {
-  transform: rotate(0deg); /* Straighten the tilt on hover */
+  transform: rotate(0deg); 
 }
 
 .pull-quote:hover blockquote {
-  color: #DD1E26; /* Fill text with red */
-  -webkit-text-stroke: 0; /* Remove outline */
+  color: #DD1E26;
+  -webkit-text-stroke: 0;
 }
 
 
-
-  
- 
-  
-  
 
   }
