@@ -93,11 +93,48 @@ cite{
     }
     
 
+blockquote{
+    font-family: "Anton";
+    font-size: calc(var(--base-size)*2);
+}
+
+
+
+
 /* DESKTOP QUERIES */
 @media (min-width: 800px) {
     /* navigation button on desktop only */
   .nav-button {
     display: block; 
   }
+
+
+  .Title {
+    font-size: calc(var(--base-size) * 8.5); /* Increase size slightly */
+    margin-bottom: 5px; /* Reduce spacing */
+  }
+  
+  .NotTitle {
+    font-size: calc(var(--base-size) * 5.2); /* Slightly larger for emphasis */
+    letter-spacing: 25px; /* Adjust for balance */
+    margin-top: 5px; /* Reduce top margin */
+  }
+  
+  .line {
+    height: calc(var(--base-size) * 1.2); /* Thicker */
+    width: 70%; /* Slightly wider for better balance */
+    margin: 5px auto; /* Reduce spacing */
+  }
+  
+  .lines {
+    height: 15px; /* Thicker lines */
+    width: 100%; /* Match full width */
+    margin: 10px 0; /* Reduce vertical spacing */
+    opacity: 40%; /* Slightly darker */
+  }
+  
+
+
+
 
   }
