@@ -134,6 +134,207 @@ blockquote{
   }
   
 
+/* Keyframes for Flicker Effect */
+@keyframes flicker {
+    0%, 100% {
+      opacity: 1;
+      filter: brightness(1);
+    }
+    10% {
+      opacity: 0.6;
+      filter: brightness(1.2);
+    }
+    20% {
+      opacity: 0.9;
+      filter: brightness(0.8);
+    }
+    30% {
+      opacity: 0.4;
+      filter: brightness(1.5);
+    }
+    50% {
+      opacity: 1;
+      filter: brightness(1);
+    }
+    70% {
+      opacity: 0.8;
+      filter: brightness(1.3);
+    }
+    90% {
+      opacity: 0.95;
+      filter: brightness(0.9);
+    }
+  }
+  
+  /* No Animation by Default */
+  .NotTitle-container, .lines {
+    opacity: 1;
+    filter: brightness(1);
+    transition: opacity 0.3s ease, filter 0.3s ease; /* Smooth fallback when not hovered */
+  }
+  
+  /* Flicker on Hover */
+  .NotTitle-container:hover, .lines:hover {
+    animation: flicker 1.5s ease-in-out infinite; /* Flicker triggers on hover */
+    
+  }
+
+  
+
+
+/* Keyframes for Jerky Glitch Effect */
+@keyframes glitch {
+    0% {
+      transform: translate(0, 0);
+    }
+    10% {
+      transform: translate(-3px, 2px);
+    }
+    20% {
+      transform: translate(2px, -2px);
+    }
+    30% {
+      transform: translate(-2px, -3px);
+    }
+    40% {
+      transform: translate(3px, 1px);
+    }
+    50% {
+      transform: translate(-1px, -1px);
+    }
+    60% {
+      transform: translate(2px, 3px);
+    }
+    70% {
+      transform: translate(-3px, -1px);
+    }
+    80% {
+      transform: translate(1px, -2px);
+    }
+    90% {
+      transform: translate(-2px, 2px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  /* Apply the Glitch Animation to Titles */
+  .Title {
+    animation: glitch 1.2s infinite steps(2, end); /* Quick, jerky glitch effect */
+    transition: filter 0.2s ease; /* Smooth filter transitions */
+  }
+  
+  /* Optional: Add Glow Effect on Hover */
+  .Title:hover {
+    color: black; 
+  }
+  
+
+
+  
+ 
+  
+/* Author and Date (Cite) */
+cite {
+    font-family: 'Anton', sans-serif;
+    font-size: 28px;
+    color: #DD1E26;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  
+  
+  
+  
+    p {
+      font-size: 20px;
+      margin: 0 auto; /* Center horizontally */
+      margin-top: 20px;
+      width: 50vw; /* Limit the width to half the viewport */
+    }
+  
+    p:nth-child(1){
+      margin-top: 120px;
+    }
+ 
+
+
+
+
+
+
+
+
+
+/* Blockquote Container alignment */
+.blockquote-container {
+    text-align: center; /* Center the blockquote */
+    position: relative;
+    overflow: hidden; 
+    padding: 2rem;
+  }
+  
+/* Blockquote Styling */
+.blockquote-rotate span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform: rotate(0deg); 
+    color: #DD1E26;
+    font-size: 4rem;
+  }
+
+
+  
+  /* Transform animation */
+  .blockquote-effect span {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth hover effect */
+    opacity: 1; 
+    transform: scale(1) translate(0, 0) rotate(0); /* Static and centered */
+  }
+  
+  /*Transform on hover */
+  .blockquote-container:hover span:nth-child(1) {
+    transform: translate(-40px, -30px) rotate(-15deg) scale(1.2); /* Up and left */
+  }
+  
+  .blockquote-container:hover span:nth-child(2) {
+    transform: translate(0, -50px) rotate(10deg) scale(1.1); /* Straight up */
+  }
+  
+  .blockquote-container:hover span:nth-child(3) {
+    transform: translate(50px, 40px) rotate(20deg) scale(1.3); /* Down and right */
+  }
+  
+  .blockquote-container:hover span:nth-child(4) {
+    transform: translate(-30px, 50px) rotate(-10deg) scale(1.2); /* Down and left */
+  }
+  
+  .blockquote-container:hover span:nth-child(5) {
+    transform: translate(40px, -20px) rotate(5deg) scale(1.15); /* Up and right */
+  }
+  
+  
+  
+  /* Rotation animation */
+  .blockquote-rotate span:nth-child(1):hover {
+    transform: rotate(-5deg);
+  }
+  .blockquote-rotate span:nth-child(2):hover {
+    transform: rotate(5deg);
+  }
+  .blockquote-rotate span:nth-child(3):hover {
+    transform: rotate(-10deg);
+  }
+  .blockquote-rotate span:nth-child(4):hover {
+    transform: rotate(10deg);
+  }
+  
+
 
 
 
