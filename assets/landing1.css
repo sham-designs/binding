@@ -358,8 +358,10 @@ body {
 			display: flex; /* Ensure the box is a flex container */
 			flex: 1; /* Take up remaining horizontal space */
 			justify-content: flex-start; /* Align text inside to the left */
-			align-items: center; /* Center align the text vertically */
+			
 			flex-direction: column;
+			
+			align-items: flex-start;
 		}
 		
 		.default-text {
@@ -376,8 +378,9 @@ body {
 		/* Hover Text */
 		.hover-text {
 			display: flex;
-			flex-direction: row; /* Align text horizontally */
-			align-items: center;
+			flex-direction: column; /* Align text horizontally */
+			align-items: flex-start;
+			width: 100%;
 			font-family: 'Courier Prime', monospace;
 			font-size: 24px;
 			color: var(--background);
@@ -387,10 +390,17 @@ body {
 			transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 		}
 	
+		.hover-text .title {
+			font-family: 'Anton';
+			font-size: calc(var(--base-size)*4);
+		}
+			
+
+
 		/* Add Diagonal Arrow to Hover Text */
 		.hover-text::after {
 			content: " →";
-			font-size: 24px;
+			font-size:100px;
 			margin-left: 8px;
 		}
 	
@@ -413,7 +423,46 @@ body {
 			padding-top: 20px; /* Add space above new rows */
 		}
 	
-	
+
+
+		.default-text {
+			opacity: 1;
+			visibility: visible;
+			position: absolute; /* Keep it within the layout flow */
+			transition: opacity 0.3s ease, visibility 0.3s ease;
+			white-space: nowrap; /* Prevent wrapping */
+		}
+		
+		li:hover .default-text {
+			opacity: 0; /* Hide visually */
+			visibility: hidden; /* Fully hidden */
+			position: absolute; /* Temporarily remove from layout */
+		}
+		
+		.text-box {
+			display: flex;
+			flex-direction: column; /* Stack hover text vertically */
+			justify-content: flex-start; /* Align items to the top */
+			align-items: flex-start; /* Align to the left */
+			position: relative; /* Important for positioning child elements */
+			overflow: hidden; /* Prevent content spillage */
+		}
+		
+		.hover-text {
+			position: relative;
+			top: 0; /* Adjust as needed */
+			left: 0; /* Adjust as needed */
+			opacity: 0; /* Hidden by default */
+			visibility: hidden; /* Ensure it's fully hidden */
+			transition: opacity 0.3s ease, visibility 0.3s ease;
+		}
+		
+		li:hover .hover-text {
+			opacity: 1; /* Make it visible on hover */
+			visibility: visible; /* Ensure it's fully visible */
+		}
+
+		
 	
   }
 
