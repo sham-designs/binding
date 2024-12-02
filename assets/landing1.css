@@ -358,9 +358,7 @@ body {
 			display: flex; /* Ensure the box is a flex container */
 			flex: 1; /* Take up remaining horizontal space */
 			justify-content: flex-start; /* Align text inside to the left */
-			
 			flex-direction: column;
-			
 			align-items: flex-start;
 		}
 		
