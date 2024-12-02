@@ -404,10 +404,28 @@ body {
 		/* Add Diagonal Arrow to Hover Text */
 		.hover-text::after {
 			content: " →";
-			font-size:100px;
+			font-size:150px;
 			margin-left: 8px;
 			line-height: 1;
+			font-family: 'Courier New', monospace; 
+			font-weight: bold;        
+			transform: rotate(-45deg);   /* Rotate to make it diagonal */
+			display: inline-block;      /* Ensure it's treated like a block for transformations */
+			color: #FF5733;             /* Custom color for the arrow */
+			transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
 		}
+		
+		/* Hover Effect for Arrow */
+		li:hover .hover-text::after {
+			transform: rotate(0deg);  /* Rotate further on hover */
+			color: var(--background);            /* Change color on hover */
+			text-align: right;
+		}
+
+
+
+
+
 	
 		/* Hover Effect for Text */
 		li:hover .default-text {
