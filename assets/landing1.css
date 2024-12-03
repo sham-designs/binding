@@ -251,7 +251,9 @@ body {
 
  @media (min-width: 600px) {
 
-
+	.LandingHeader:hover{
+		background-color: black;
+	}
 
     .text-content {
         max-width: 50vw;
@@ -340,21 +342,21 @@ body {
 			transition: all 0.3s ease-in-out;
 		}
 	
-		/* Hover Effect for Glyphs */
+		/* Hover Effect for lists!!!!! */
 		li:hover,
 		li:hover,
 		li:hover{
 			color:var(--background);
-			background-color: var(--red); /* Background turns red */
+			background-color: black; /* Background turns black */
 			padding: 10px; /* Add some padding to emphasize the change */
 		}
-		li:hover .icon1,{
+		/* li:hover .icon1,{
 			color: var(--background);
-			-webkit-text-stroke: 2px var(--red);
+			-webkit-text-stroke: 2px var(--background);
 
-		}
+		} */
 
-		li:hover .icon2, li:hover .icon3{
+		li:hover .icon1, li:hover .icon2, li:hover .icon3{
 			color: var(--background);
 			-webkit-text-stroke: 2px var(--background);
 
@@ -415,6 +417,7 @@ body {
 			transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
 		}
 		
+
 		/* Hover Effect for Arrow */
 		li:hover .hover-text::after {
 			transform: rotate(0deg);  /* Rotate further on hover */
