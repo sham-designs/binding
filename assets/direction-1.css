@@ -315,10 +315,68 @@ p {
     width: 50vw; /* Center and constrain width */
   }
 
-/* navigation button on desktop only */
-  .nav-button {
-    display: block; 
-  }
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #D72638; /* Red background */
+  padding: 40px 40px; /* Space around the navbar */
+}
+
+/* Nav Box Styling */
+.nav-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px; /* Consistent box size */
+  height: 90px;
+  background-color: #FFF6E5; /* Cream background */
+  text-decoration: none;
+  font-family: 'Climate Crisis', sans-serif;
+  color: #D72638; /* Red text */
+}
+
+
+/* Glyph Group Styling */
+.glyph-group {
+  display: flex;
+  gap: 15px; /* Spacing between each glyph in the group */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glyph Group Styling */
+.glyph {
+  display: flex;
+  flex-direction: column; /* Stack dashes vertically */
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* Tighter spacing between dashes */
+}
+
+.glyph div {
+  width: 40px; /* Dash length */
+  height: 10px; /* Dash thickness */
+  background-color: #D72638; /* Red to match navbar */
+}
+
+/* Spacing */
+.glyph-one, .glyph-two, .glyph-three {
+  margin: 0 10px; /* Closer spacing between glyphs */
+}
+
+.home-button, .next-button {
+  font-size: 40px;
+  margin: 0 30px; /* Equal spacing for H and > */
+}
+
+/* Hover Effect */
+.nav-box:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+
 
 
      }
