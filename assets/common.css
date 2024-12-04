@@ -70,11 +70,11 @@ h2{
 
 
 
-
+/* 
 .nav-button {
     position: absolute;
     top: 20px;
-    width: 90px; /* Button size */
+    width: 90px; 
     height: 90px;
     background-color: var(--red); 
     color: var(--background);
@@ -86,7 +86,7 @@ h2{
     border-radius: 0px;
     transition: transform 0.3s ease, background-color 0.3s ease;
     z-index: 10;
-    display: none; /* Dont want this on mobile yet */
+    display: none; 
   }
 
   .home-button {
@@ -100,4 +100,145 @@ h2{
 
 .nav-button:hover {
     transform: scale(1.1);
+  } */
+
+
+  @media (min-width: 800px) {
+
+    /* Navigation */
+    /* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--red);
+  padding: 40px 40px; /* Space around the navbar */
+}
+
+/* Nav Box Styling */
+.nav-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px; /* Consistent box size */
+  height: 90px;
+  background-color: #FFF6E5; /* Cream background */
+  text-decoration: none;
+  font-family: 'Climate Crisis', sans-serif;
+  color: #D72638; /* Red text */
+}
+
+
+/* Glyph Group Styling */
+.glyph-group {
+  display: flex;
+  gap: 0px; /* Spacing between each glyph in the group */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glyph Group Styling */
+.glyph {
+  display: flex;
+  flex-direction: column; /* Stack dashes vertically */
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* Tighter spacing between dashes */
+}
+
+.glyph div {
+  width: 40px; /* Dash length */
+  height: 10px; /* Dash thickness */
+  background-color: #D72638; /* Red to match navbar */
+}
+
+/* Spacing */
+.glyph-one, .glyph-two, .glyph-three {
+  margin: 0 10px; /* Closer spacing between glyphs */
+}
+
+.home-button, .next-button {
+  font-size: 40px;
+  margin: 0 30px; /* Equal spacing for H and > */
+}
+
+/* Hover Effect */
+.nav-box:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+.nav-box {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Hover animatiosn for every button */
+
+.home-button:hover .button-icon {
+  content: "↗"; /* Change to diagonal arrow */
+  font-size: 50px; /* Slightly increase size */
+  transform: rotate(20deg); /* Add a playful rotation */
+  transition: transform 0.3s ease, font-size 0.3s ease;
+  color: #000000;
+}
+
+
+.glyph-one:hover .button-icon {
+  transform: rotate(45deg); /* Rotate slightly */
+  transition: transform 0.3s ease;
+}
+
+.glyph-one:hover .glyph div {
+  background-color: #000000; /* Make the line (glyph) black */
+  transition: background-color 0.3s ease;
+}
+
+
+
+.glyph-two:hover .glyph div:nth-child(1) {
+  transform: translateY(-5px); /* Move first line up */
+  transition: transform 0.3s ease;
+  background-color: #000000; 
+}
+
+.glyph-two:hover .glyph div:nth-child(2) {
+  transform: translateY(5px); /* Move second line down */
+  transition: transform 0.3s ease;
+  background-color: #000000; 
+}
+
+
+
+
+.glyph-three:hover .glyph div:nth-child(1) {
+  transform: rotate(10deg); /* Skew first line slightly */
+  transition: transform 0.3s ease;
+  background-color: #000000; 
+
+}
+
+.glyph-three:hover .glyph div:nth-child(2) {
+  transform: rotate(-10deg); /* Skew second line in the opposite direction */
+  transition: transform 0.3s ease;
+  background-color: #000000; 
+
+}
+
+.glyph-three:hover .glyph div:nth-child(3) {
+  transform: rotate(15deg); /* Skew third line a bit more */
+  transition: transform 0.3s ease;
+  background-color: #000000; 
+
+}
+
+
+.next-button:hover .button-icon {
+  transform: translateX(10px); 
+  transition: transform 0.3s ease;
+  color: #000000; 
+
+}
+
   }
+    
+  
