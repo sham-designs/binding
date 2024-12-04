@@ -69,38 +69,16 @@ h2{
 }
 
 
+/* Highlight some words for emphasis */
+.highlight {
+  font-family: 'Anton', sans-serif;
+  background-color: black;
+  color: #DD1E26;
+  padding: 2px 4px; /* Adds spacing inside the highlight */
+  border-radius: 2px; /* Optional for a softer look */
+  display: inline;
+}
 
-/* 
-.nav-button {
-    position: absolute;
-    top: 20px;
-    width: 90px; 
-    height: 90px;
-    background-color: var(--red); 
-    color: var(--background);
-    font-family: 'Climate Crisis';
-    font-size: 60px;
-    line-height: 90px;
-    text-align: center;
-    border: none;
-    border-radius: 0px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    z-index: 10;
-    display: none; 
-  }
-
-  .home-button {
-    left: 20px; 
-  }
-  
-  .next-button {
-    right: 20px; 
-  }
-
-
-.nav-button:hover {
-    transform: scale(1.1);
-  } */
 
 
   @media (min-width: 800px) {
@@ -238,6 +216,21 @@ h2{
   color: #000000; 
 
 }
+
+
+
+
+/* Drop caps for paragraphs */
+p:first-of-type::first-letter {
+  font-size: 3em;
+  font-family: 'Anton', sans-serif;
+  color: #DD1E26;
+  float: left;
+  margin-right: 10px;
+  line-height: 1;
+}
+
+
 
   }
     
