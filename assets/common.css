@@ -22,6 +22,16 @@ p{
 	margin-top: var(--padding);
 }
 
+/* Drop caps for paragraphs */
+p:first-of-type::first-letter {
+  font-size: 3em;
+  font-family: 'Anton', sans-serif;
+  color: #DD1E26;
+  float: left;
+  margin-right: 10px;
+  line-height: 1;
+}
+
 h1{
     font-family: 'Anton';
     color: var(--background);
@@ -217,18 +227,6 @@ h2{
 
 }
 
-
-
-
-/* Drop caps for paragraphs */
-p:first-of-type::first-letter {
-  font-size: 3em;
-  font-family: 'Anton', sans-serif;
-  color: #DD1E26;
-  float: left;
-  margin-right: 10px;
-  line-height: 1;
-}
 
 
 
