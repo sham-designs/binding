@@ -32,8 +32,112 @@ body {
 
 
 
+/* All mobile media queries */
 
-/* Header Animations */
+@media (max-width: 600px) {
+  
+
+/* Header Animations for .FirstTitle */
+.FirstTitle {
+    font-size: calc(var(--base-size) * 4); /* Adjust size for mobile */
+    display: inline-block; /* Needed for transform animations */
+    animation: scaleAndSpace 3s linear infinite; /* Linear infinite animation */
+}
+
+/* Keyframes for Scaling and Letter Spacing */
+@keyframes scaleAndSpace {
+    0%, 100% {
+        transform: scale(1); /* Normal size */
+        letter-spacing: 2px; /* Default spacing */
+        opacity: 1; /* Full visibility */
+    }
+    50% {
+        transform: scale(1.2); /* Scaled up */
+        letter-spacing: 8px; /* Wider letter spacing */
+        opacity: 0.9; /* Slight fade */
+    }
+}
+
+@media (max-width: 600px) {
+    /* General Styles for Article Links */
+    .article-links a {
+        font-family: 'Anton', sans-serif; /* Ensure Anton is applied */
+        font-weight: bold;
+        color: #DD1E26; /* Red text color */
+        text-decoration: none; /* Remove underline */
+        display: flex; /* Keep links flexible */
+        align-items: center;
+        padding: 10px; /* Add some padding */
+        border: 2px solid #DD1E26; /* Add a border for emphasis */
+        margin-bottom: 10px; /* Space between links */
+    }
+
+    /* Default Text (Visible by Default) */
+    .article-links a .default-text {
+        font-size: 1.5rem; /* Keep it bold and large */
+        display: block; /* Visible by default */
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    /* Hover Text (Hidden by Default) */
+    .article-links a .hover-text {
+        display: none; /* Hidden by default */
+        opacity: 0;
+        font-size: 1.2rem; /* Slightly smaller for title and description */
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transform: translateY(10px); /* Slide in effect */
+        color: #000; /* Black for contrast */
+    }
+
+    /* Tap-to-Reveal (Focus State) */
+    .article-links a:focus-within .default-text {
+        opacity: 0; /* Hide the default text */
+    }
+
+    .article-links a:focus-within .hover-text {
+        display: block; /* Show the hover text */
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Slide into position */
+    }
+
+    /* Glyph/Icon Styles */
+    .article-links .icon1,
+    .article-links .icon2,
+    .article-links .icon3 {
+        font-family: 'Climate Crisis', sans-serif;
+        font-size: 2rem; /* Adjust icon size */
+        margin-right: 10px; /* Space between icon and text */
+        color: #DD1E26; /* Keep the glyph red */
+    }
+}
+
+
+
+
+
+
+
+	.big-footer{
+		display: none;
+	}
+
+   
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+/* Header Animations For Desktop */
 @media (min-width: 800px) {
     .LandingHeader {
         display: flex;
@@ -105,155 +209,10 @@ body {
 
 
 
-
-
-
-/* Icon view for article links for smaller screens */
-
-@media (max-width: 600px) {
-
-
-	/* Article links */
-	.article-links {
-		background-color: var(--background); /* Background similar to the screenshot */
-	}
-	
-	.article-links ol {
-		list-style: none; 
-		margin: 0;
-		padding: 0;
-	}
-	
-	.article-links li {
-		display: flex; /* Flexbox to align icon and title horizontally */
-		align-items: center;
-		border: 2px solid #DD1E26; /* Red border around each item */
-		/* margin-bottom: 15px;  */
-		padding-top: 0px;
-		padding-bottom:0px;
-		padding-right: 2px;
-		padding-left: 0px;
-	
-	}
-	
-	.article-links li:last-child {
-		margin-bottom: 0; /* Remove margin for the last item */
-	}
-	
-	.article-links a {
-		display: flex; /* Flexbox for icon and text alignment */
-		align-items: center;
-		text-decoration: none; /* Remove underline from links */
-		color: #DD1E26; /* Red text color */
-		width: 100%; /* Ensure the link spans the entire item */
-	}
-	
-	.article-links .icon1 {
-		font-family: 'Climate Crisis', sans-serif; /* Use your preferred font */
-		font-size: 40px; /* Size of the "g" icon */
-		text-decoration: line-through;
-		-webkit-text-stroke: 1px #FFF8E5;
-		margin-right: 15px; /* Space between the icon and the text */
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: var(--background);
-		color: var(--red);
-		width: 60px; /* Icon box width */
-		height: 60px; /* Icon box height */
-		text-align: center;
-	}
-	
-	.article-links .icon2 {
-		font-family: 'Climate Crisis', sans-serif;
-		font-size: 40px; 
-		margin-right: 15px; 
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: #DD1E26; 
-		color: #F4F2E9;
-		width: 60px; 
-		height: 60px; 
-		text-align: center;
-	}
-	
-	.article-links .icon3 {
-		font-family: 'Climate Crisis', sans-serif;
-		font-size: 40px;
-		/* text-decoration: overline; */
-		box-shadow: 3px 0px 0 #DD1E26;
-		line-height: 0;
-		margin-right: 15px; 
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: var(--background);
-		color: var(--red);
-		width: 60px; 
-		height: 60px; 
-		text-align: center;
-	}
-	
-	
-	
-	
-	.article-links .title {
-		font-family: 'Anton';
-		color: var(--background);
-		-webkit-text-stroke: 1px #DD1E26;
-		font-size: calc(var(--base-size)*1.2);
-		line-height: 1.4;
-	}
-
-
-	.article-links .title {
-	  display: none; 
-	}
-	.article-links .description {
-		display: none;
-	}
-	.article-links {
-	  display: flex; 
-	  justify-content: space-evenly; 
-	  align-items: center; 
-	  position: sticky; 
-	  bottom: 0; 
-	  background-color: #FFF8E5; 
-	  padding: 0.5rem 0;
-	  z-index: 10; 
-	  width: 100%;
-	}
-  
-
-	.article-links li {
-	  display: inline-flex; 
-	  justify-content: center;
-	  align-items: center;
-	  flex: 1; 
-	  padding: 0; 
-	  margin: 0; 
-	  border: none; 
-	}
-  
-	.article-links .icon1,
-	.article-links .icon2,
-	.article-links .icon3 {
-	  font-size: 4rem; 
-	  width: fit-content; 
-	  height: auto; 
-	}
-  }
-  
-
-/* DESKTOP MEDIA QUERIES */
-
+/* REST OF DESKTOP MEDIA QUERIES */
 
  @media (min-width: 800px) {
 
-	/* .LandingHeader:hover{
-		background-color: black;
-	} */
 
     .text-content {
         max-width: 50vw;
@@ -495,8 +454,7 @@ body {
 
 
 
-
-
+/* landing page footer for desktop */
   .big-footer {
     background-color: #DD1E26; /* Red background */
     color: #FFF6E5; /* Cream text */
@@ -512,27 +470,6 @@ body {
 	margin-bottom: 40px;
 }
 
-/* 
-.big-glyphs {
-    display: flex;
-    justify-content: center;
-    gap: 20px; 
-    margin: 20px 0;
-}
-
-.big-glyphs div {
-    width: 20px;
-    height: 100px;
-    background-color: #FFF6E5; 
-    transform: rotate(45deg);
-    transition: transform 0.3s ease;
-	margin-left: 40px;
-}
-
-.big-glyphs div:hover {
-    transform: rotate(0deg); 
-    background-color: #000000; 
-} */
 
 .footer-content {
     display: flex;
@@ -605,7 +542,7 @@ body {
 }
 
 .back-to-top:hover {
-    color: #000000; /* Black on hover */
+    color: #000000; 
 }
 
 
@@ -613,13 +550,13 @@ body {
 .footer-glyphs {
 	display: flex;
 	justify-content: center;
-	gap: 30px; /* Space between vertical lines */
+	gap: 30px; 
   }
   
   .footer-glyphs .glyph {
-	width: 5px; /* Line thickness */
-	height: 100px; /* Line height */
-	background-color: var(--background); /* Cream */
+	width: 5px; 
+	height: 100px; 
+	background-color: var(--background); 
 	transform: scale(1);
 	transition: transform 0.3s ease, background-color 0.3s ease;
 	padding: 0;
@@ -627,8 +564,8 @@ body {
   }
   
   .footer-glyphs .glyph:hover {
-	transform: scaleY(1.5) translateX(-5px); /* Scale vertically and move slightly on hover */
-	background-color: black; /* Change color on hover */
+	transform: scaleY(1.5) translateX(-5px); 
+	background-color: black;
   }
   
 
@@ -649,8 +586,9 @@ body {
 	  transform: translateX(0);
 	}
 	100% {
-	  transform: translateX(10px); /* Float slightly sideways */
+	  transform: translateX(10px); 
 	}
   }
   
-  
+
+ 
