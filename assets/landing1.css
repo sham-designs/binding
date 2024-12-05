@@ -30,6 +30,27 @@ body {
 }
 
 
+/* Distinct Glyph Styles */
+		.icon1 {
+			font-family: 'Climate Crisis', sans-serif;
+			color: var(--red);
+			text-decoration: line-through;
+			-webkit-text-stroke: 2px var(--background);
+		}
+	
+		.icon2 {
+			font-family: 'Climate Crisis', sans-serif;
+			color: var(--red);
+			transform: rotate(-12deg);
+			text-underline-offset: 30px;
+		}
+	
+		.icon3 {
+			font-family: 'Climate Crisis', sans-serif;
+			color: var(--red);
+			text-decoration: overline;
+		}
+	
 
 
 /* All mobile media queries */
@@ -39,7 +60,7 @@ body {
 
 /* Header Animations for .FirstTitle */
 .FirstTitle {
-    font-size: calc(var(--base-size) * 4); /* Adjust size for mobile */
+    font-size: calc(var(--base-size) * 3); /* Adjust size for mobile */
     display: inline-block; /* Needed for transform animations */
     animation: scaleAndSpace 3s linear infinite; /* Linear infinite animation */
 }
@@ -58,65 +79,62 @@ body {
     }
 }
 
-@media (max-width: 600px) {
-    /* General Styles for Article Links */
-    .article-links a {
-        font-family: 'Anton', sans-serif; /* Ensure Anton is applied */
-        font-weight: bold;
-        color: #DD1E26; /* Red text color */
-        text-decoration: none; /* Remove underline */
-        display: flex; /* Keep links flexible */
-        align-items: center;
-        padding: 10px; /* Add some padding */
-        border: 2px solid #DD1E26; /* Add a border for emphasis */
-        margin-bottom: 10px; /* Space between links */
-    }
 
-    /* Default Text (Visible by Default) */
-    .article-links a .default-text {
-        font-size: 1.5rem; /* Keep it bold and large */
-        display: block; /* Visible by default */
-        opacity: 1;
-        transition: opacity 0.3s ease-in-out;
-    }
+	/* Glyph Styles for mobile */
+	.icon1, .icon2, .icon3{
+		font-size: calc(var(--base-size)*3);
+		margin-right: 10px;
+		margin-left: var(--padding);
+		display: block; 
+		animation: rotationalPulse 2s infinite ease-in-out;
+	}
 
-    /* Hover Text (Hidden by Default) */
-    .article-links a .hover-text {
-        display: none; /* Hidden by default */
-        opacity: 0;
-        font-size: 1.2rem; /* Slightly smaller for title and description */
-        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-        transform: translateY(10px); /* Slide in effect */
-        color: #000; /* Black for contrast */
-    }
+.icon3{
+	text-decoration-thickness: 8px;
+}
 
-    /* Tap-to-Reveal (Focus State) */
-    .article-links a:focus-within .default-text {
-        opacity: 0; /* Hide the default text */
+@keyframes rotationalPulse {
+    0%, 100% {
+        transform: rotate(0deg); /* Default position */
     }
-
-    .article-links a:focus-within .hover-text {
-        display: block; /* Show the hover text */
-        opacity: 1; /* Fade in */
-        transform: translateY(0); /* Slide into position */
-    }
-
-    /* Glyph/Icon Styles */
-    .article-links .icon1,
-    .article-links .icon2,
-    .article-links .icon3 {
-        font-family: 'Climate Crisis', sans-serif;
-        font-size: 2rem; /* Adjust icon size */
-        margin-right: 10px; /* Space between icon and text */
-        color: #DD1E26; /* Keep the glyph red */
+    50% {
+        transform: rotate(10deg); /* Slight clockwise rotation */
     }
 }
 
+/* Article Links */
+.article-links ol {
+    list-style: none; /* Remove default bullet points */
+    margin: 0;
+    padding: 0;
+	margin-top: calc(var(--padding)*2);
+}
 
+.article-links li {
+    display: block; /* Remove flex to stack content */
+    text-align: center; /* Center the title and glyph */
+	margin-bottom: 20px;
+	padding-top: 10px; /* Add space above content */
+	border-top: 2px solid #DD1E26; /* Add top border in red */
+}
 
+/* Default Text (Bold Red Anton) */
+.article-links .default-text {
+    font-family: 'Anton', sans-serif;
+    font-weight: bold; 
+    font-size: calc(var(--base-size)*2);
+	color: var(--red);
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+	margin-top: var(--base-size);
+	text-align: center;
+	display: block;
+}
 
-
-
+/* Hide Hover Text and Descriptions */
+.article-links .hover-text {
+    display: none; /* Fully hide hover text */
+}
 
 	.big-footer{
 		display: none;
@@ -269,35 +287,23 @@ body {
 		}
 
 
-		/* Distinct Glyph Styles */
+		/* Glyph Styles for desktop */
 		.icon1 {
-			font-family: 'Climate Crisis', sans-serif;
 			font-size: 140px; /* Large glyph */
 			margin-right: 20px;
-			color: var(--red);
-			text-decoration: line-through;
-			-webkit-text-stroke: 2px var(--background);
 			transition: all 0.3s ease-in-out;
 		}
 	
 		.icon2 {
-			font-family: 'Climate Crisis', sans-serif;
 			font-size: 140px; /* Large glyph */
 			margin-right: 20px;
-			color: var(--red);
-			/* text-decoration: underline; */
-			transform: rotate(-12deg);
-			text-underline-offset: 30px;
 			transition: all 0.3s ease-in-out;
 		}
 	
 		.icon3 {
-			font-family: 'Climate Crisis', sans-serif;
 			font-size: 140px; /* Large glyph */
 			margin-right: 20px;
-			color: var(--red);
-			text-decoration: overline;
-			text-decoration-thickness: 18px; /* Adjust thickness */
+			text-decoration-thickness: 18px;
 			transition: all 0.3s ease-in-out;
 		}
 	
