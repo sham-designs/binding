@@ -493,3 +493,116 @@ body {
   }
 
 
+
+
+
+
+  .big-footer {
+    background-color: #DD1E26; /* Red background */
+    color: #FFF6E5; /* Cream text */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-thankyou h5 {
+    font-family: 'Climate Crisis', sans-serif;
+	font-size: calc(var(--base-size) *10);
+    color: #FFF6E5;
+    margin: 0 0 20px;
+}
+
+
+.big-glyphs {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between glyphs */
+    margin: 20px 0;
+}
+
+.big-glyphs div {
+    width: 20px;
+    height: 100px;
+    background-color: #FFF6E5; /* Cream color for glyphs */
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+	margin-left: 40px;
+}
+
+.big-glyphs div:hover {
+    transform: rotate(0deg); /* Rotate back on hover */
+    background-color: #000000; /* Black for hover */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin: 40px 0;
+}
+
+.footer-links,
+.footer-colophon {
+    flex: 1;
+}
+
+.footer-links h3,
+.footer-colophon h3 {
+	font-family: 'Anton';
+	font-size:calc(var(--base-size)*3);
+	-webkit-text-stroke-color: var(--background);
+	-webkit-text-stroke-width: 2px;
+	color: var(--red);
+    margin-bottom: 20px;
+}
+
+.footer-links h3{
+	margin-left: 50px;
+}
+.footer-links a {
+    display: block;
+    margin: 10px 0;
+    color: #FFF6E5;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+	font-family: 'Courier Prime', monospace;
+	margin-left: 50px;
+}
+
+.footer-links a:hover {
+    color: #000000; /* Black on hover */
+    transform: scale(1.1);
+	font-weight: bold;
+}
+
+.footer-colophon p {
+    font-family: 'Courier Prime', monospace;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #FFF6E5;
+	padding: 0;
+}
+
+.footer-credits {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.footer-credits p {
+    font-family: 'Courier Prime', monospace;
+    font-size: 1rem;
+    color: #FFF6E5;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 10px;
+    color: #FFF6E5;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.back-to-top:hover {
+    color: #000000; /* Black on hover */
+}
