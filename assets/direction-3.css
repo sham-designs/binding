@@ -109,7 +109,7 @@ blockquote{
   }
 
 .title-container{
-    margin-top: 100px;
+    margin-top: 40px;
 }
   .Title {
     font-size: calc(var(--base-size) * 8.5); /* Increase size slightly */
