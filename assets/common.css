@@ -181,8 +181,9 @@ h2{
       }
       
       .home-button, .next-button {
-        font-size: calc(var(--base-size)*1.5); /* Adjust font size for mobile */
+        font-size: calc(var(--base-size)*1.8); /* Adjust font size for mobile */
         margin: 10px 10px;
+        height: calc(var(--base-size)*3);
       }
     }
 
