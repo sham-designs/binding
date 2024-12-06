@@ -271,10 +271,50 @@ body {
     display: none; /* Fully hide hover text */
 }
 
-	.big-footer{
-		display: none;
-	}
+.big-footer {
+    padding: 20px 10px; /* Reduce padding */
+    text-align: center; /* Ensure content is centered */
+  }
 
+  .footer-thankyou h5 {
+    font-size: calc(var(--base-size) * 3); /* Smaller heading size */
+    margin-bottom: 20px; /* Adjust spacing */
+  }
+
+  .footer-links h3,
+  .footer-colophon h3 {
+    font-size: calc(var(--base-size) * 2); /* Smaller subheading size */
+    margin-bottom: 10px;
+  }
+
+
+  .footer-links a{
+	font-size: var(--base-size);
+  }
+
+
+  .footer-content {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Optional: center-align text */
+    gap: 20px; /* Add spacing between the sections */
+  }
+
+  .footer-links,
+  .footer-colophon {
+    margin: 0 auto; /* Optional: center-align the sections */
+    width: 100%; /* Make them take up the full width */
+  }
+
+
+  .footer-glyphs .glyph {
+    width: 3px; /* Narrower glyphs */
+    height: 50px; /* Shorter glyphs */
+    gap: 15px; /* Reduce spacing between glyphs */
+  }
+
+  .back-to-top{
+	font-family: 'Anton';
+  }
    
 }
 
@@ -469,35 +509,30 @@ body {
 		}
 		
 
-		/* Hover Effect for Arrow */
 		li:hover .hover-text::after {
-			transform: rotate(0deg);  /* Rotate further on hover */
-			color: var(--background);            /* Change color on hover */
+			transform: rotate(0deg);  
+			color: var(--background);  
 			text-align: right;
 		}
-
-
-
-
 
 	
 		/* Hover Effect for Text */
 		li:hover .default-text {
-			opacity: 0; /* Hide default text */
+			opacity: 0; 
 			visibility: hidden;
-			transform: translateX(10px); /* Animate out */
+			transform: translateX(10px); 
 		}
 	
 		li:hover .hover-text {
-			opacity: 1; /* Show hover text */
+			opacity: 1; 
 			visibility: visible;
-			transform: translateX(0); /* Animate in */
+			transform: translateX(0); 
 		}
 	
-		/* Dividers Between Rows */
+		
 		li + li {
-			border-top: 1px solid var(--red); /* Thin red line between rows */
-			padding-top: 20px; /* Add space above new rows */
+			border-top: 1px solid var(--red); 
+			padding-top: 20px;
 		}
 	
 
@@ -505,57 +540,85 @@ body {
 		.default-text {
 			opacity: 1;
 			visibility: visible;
-			position: absolute; /* Keep it within the layout flow */
+			position: absolute; 
 			transition: opacity 0.3s ease, visibility 0.3s ease;
-			white-space: nowrap; /* Prevent wrapping */
+			white-space: nowrap; 
 		}
 		
 		li:hover .default-text {
-			opacity: 0; /* Hide visually */
-			visibility: hidden; /* Fully hidden */
-			position: absolute; /* Temporarily remove from layout */
+			opacity: 0; 
+			visibility: hidden; 
+			position: absolute; 
 		}
 		
 		.text-box {
 			display: flex;
-			flex-direction: column; /* Stack hover text vertically */
-			justify-content: flex-start; /* Align items to the top */
-			align-items: flex-start; /* Align to the left */
-			position: relative; /* Important for positioning child elements */
-			overflow: hidden; /* Prevent content spillage */
+			flex-direction: column; 
+			justify-content: flex-start;
+			align-items: flex-start; 
+			position: relative;
+			overflow: hidden; 
 		}
 		
 		.hover-text {
 			position: relative;
-			top: 0; /* Adjust as needed */
-			left: 0; /* Adjust as needed */
-			opacity: 0; /* Hidden by default */
-			visibility: hidden; /* Ensure it's fully hidden */
+			top: 0; 
+			left: 0; 
+			opacity: 0; 
+			visibility: hidden; 
 			transition: opacity 0.3s ease, visibility 0.3s ease;
 		}
 		
 		li:hover .hover-text {
-			opacity: 1; /* Make it visible on hover */
-			visibility: visible; /* Ensure it's fully visible */
+			opacity: 1; 
+			visibility: visible; 
 		}
 
+		/* Footer desktop sizes */
+		.big-footer {
+			padding: 20px 10px; /* Reduce padding */
+			text-align: center; /* Ensure content is centered */
+		  }
 		
+		  .footer-thankyou h5 {
+			font-size: calc(var(--base-size) * 10); /* Smaller heading size */
+			margin-bottom: 20px; /* Adjust spacing */
+		  }
+		
+		  .footer-links h3,
+		  .footer-colophon h3 {
+			font-size: calc(var(--base-size) * 3); /* Smaller subheading size */
+			margin-bottom: 10px;
+		  }
+		
+		  .footer-links a {
+			font-size: 1.2rem; /* Reduce link font size */
+			margin-left: 50px; /* Adjust margin for smaller screens */
+		  }
+		
+		  .footer-links h3{
+			margin-left: 50px;
+		}
+
+		  .footer-glyphs .glyph {
+			width: 3px; /* Narrower glyphs */
+			height: 50px; /* Shorter glyphs */
+			gap: 15px; /* Reduce spacing between glyphs */
+		  }	
 	
   }
 
 
-/* landing page footer for desktop */
+/* footer */
   .big-footer {
     background-color: #DD1E26; /* Red background */
     color: #FFF6E5; /* Cream text */
-    padding: 40px 20px;
     text-align: center;
 }
 
 .footer-thankyou h5 {
-    font-family: 'Climate Crisis', sans-serif;
-	font-size: calc(var(--base-size) *10);
     color: #FFF6E5;
+	font-family: 'Climate Crisis', sans-serif;
     margin: 0 0 20px;
 	margin-bottom: 40px;
 }
@@ -576,25 +639,21 @@ body {
 .footer-links h3,
 .footer-colophon h3 {
 	font-family: 'Anton';
-	font-size:calc(var(--base-size)*3);
 	-webkit-text-stroke-color: var(--background);
 	-webkit-text-stroke-width: 2px;
 	color: var(--red);
     margin-bottom: 20px;
 }
 
-.footer-links h3{
-	margin-left: 50px;
-}
+
+
 .footer-links a {
     display: block;
     margin: 10px 0;
     color: #FFF6E5;
     text-decoration: none;
-    font-size: 1.2rem;
     transition: color 0.3s ease, transform 0.3s ease;
 	font-family: 'Courier Prime', monospace;
-	margin-left: 50px;
 }
 
 .footer-links a:hover {
@@ -626,7 +685,7 @@ body {
     display: inline-block;
     margin-top: 10px;
     color: #FFF6E5;
-    font-size: 1.2rem;
+    font-size: 2rem;
     text-decoration: underline;
     transition: color 0.3s ease;
 }
