@@ -188,6 +188,49 @@ display: block;
       font-size: calc(var(--base-size)* 1.2);
   }
 
+
+  .pull-quote {
+    position: relative;
+    text-align: left;
+    margin: 80px 0;
+    margin-left:var(--padding);
+    width: 90vw;
+    transform: rotate(-5deg);
+    animation: pullQuoteMobile 6s ease-in-out infinite;
+  }
+
+  .pull-quote blockquote {
+    font-family: 'Anton';
+    font-size: 2rem; /* Adjust font size for readability */
+    line-height: 1.2;
+    color: transparent;
+    -webkit-text-stroke: 2px #DD1E26;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: pullQuoteMobile 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  }
+
+
+  @keyframes pullQuoteMobile {
+    0%, 80% {
+      transform: rotate(-5deg);
+      color: transparent;
+      -webkit-text-stroke: 1px #DD1E26;
+    }
+    85% {
+      transform: rotate(0deg);
+      color: #DD1E26;
+      -webkit-text-stroke: 0;
+    }
+    100% {
+      transform: rotate(-5deg);
+      color: transparent;
+      -webkit-text-stroke: 1px #DD1E26;
+    }
+  }
+  
+
+
   }
 
 
