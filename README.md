@@ -6,4 +6,4 @@ The three articles are as follows:
 - Graphic Design’s Factory Settings - BY Jacob Lindgren
 
 The website has a very loud tone to challenge the traditional norms of clean and minimal graphic design popular in the west.
-The typography has bold elements using the typeface "Climate Crisi", bold headings using the typeface "Anton" and a mono font called "Courier Prime".
+The typography has bold elements using the typeface "Climate Crisis", bold headings using the typeface "Anton" and a mono font called "Courier Prime".
