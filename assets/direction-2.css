@@ -333,6 +333,8 @@ cite {
   text-align: left;
   margin: 50px 0;
   margin-left: 60px;
+  margin-top: calc(var(--padding)*8);
+  margin-bottom: calc(var(--padding)*8);
   width: 70vw;
   transform: rotate(-5deg); 
   transition: transform 0.3s ease; 

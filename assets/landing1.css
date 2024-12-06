@@ -610,6 +610,7 @@ body {
 		.article-links ol {
 			padding: 0;
 			margin: 0;
+			margin-bottom: calc(var(--padding)*4);
 		}
 	
 		.article-links li {

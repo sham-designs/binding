@@ -354,15 +354,6 @@ p {
     line-height: 1.6;
     text-align: left;
 }
-/* 
-  .big-quote {
-    font-size: calc(var(--base-size) * 10);
-    color: var(--red);
-    position: absolute;
-    top: -90px;
-    left: 0px;
-    transition: transform 1s ease;
-  } */
 
   .big-quote{
     display: none;
@@ -381,8 +372,10 @@ p {
     color: #000000;
     -webkit-text-stroke: 1px #000000;
     text-align: center;
-    font-size: calc(var(--base-size) * 3);
+    font-size: calc(var(--base-size) * 4);
     margin: var(--padding) auto;
+    margin-top: calc(var(--base-size)*4);
+    margin-bottom: calc(var(--base-size)*4);
     width: 50vw; 
     /* display: inline-block; */
     transition: transform 0.5s ease;
@@ -397,7 +390,7 @@ p {
 
   h3 {
     font-family: 'Courier Prime', Courier, monospace;
-    font-size: calc(var(--base-size) * 1.8);
+    font-size: calc(var(--base-size) * 2);
     text-align: center;
     color: var(--red);
     font-weight: bold;

@@ -189,6 +189,14 @@ blockquote{
     display: block; 
   }
 
+  h2{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin-top: calc(var(--padding)*3);
+    margin-bottom: calc(var(--padding)*3);
+  }
+
 .title-container{
     margin-top: 40px;
 }
@@ -305,6 +313,8 @@ cite:nth-of-type(1) {
     position: relative;
     overflow: hidden; 
     padding: 2rem;
+    margin-top: calc(var(--padding)*3);
+    margin-bottom: calc(var(--padding)*3);
   }
   
 
