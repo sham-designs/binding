@@ -68,6 +68,66 @@ body {
     color: var(--background);
 }
 
+/* header animations */
+.FirstTitle {
+	line-height: 0.4;
+	display: inline-block;
+	transition: all 0.5s ease; /* Smooth transitions for all properties */
+	color: var(--background);
+	text-decoration: none; /* Default state */
+	font-weight: bold;
+	-webkit-text-stroke: 0px; /* Default no stroke */
+}
+
+.FirstTitle {
+	animation: 
+		fadeInLargeText 2s ease-in-out forwards 1.5s, /* Delayed fade-in animation */
+		textStrokeEffect 4s infinite ease-in-out; /* Infinite text stroke animation */
+	opacity: 0; /* Start invisible */
+}
+
+@keyframes fadeInLargeText {
+	0% {
+		opacity: 0; /* Invisible */
+		transform: translateY(10px); /* Slightly lower */
+	}
+	100% {
+		opacity: 1; /* Fully visible */
+		transform: translateY(0); /* Reset position */
+	}
+}
+
+@keyframes textStrokeEffect {
+	0%, 100% {
+		-webkit-text-stroke: 0px; /* No stroke */
+		/* color: var(--background); */
+	}
+	50% {
+		-webkit-text-stroke: 2px #FFF6E5; /* Cream stroke */
+		color: transparent; /* Outline only */
+	}
+}
+
+.MiddleTitle {
+	display: inline-block;
+	letter-spacing: calc(var(--base-size) * 2);
+	animation: letterSpacingLoop 4s infinite ease-in-out;
+}
+
+@keyframes letterSpacingLoop {
+	0% {
+		letter-spacing: calc(var(--base-size) * 2);
+	}
+	50% {
+		letter-spacing: 2px;
+	}
+	100% {
+		letter-spacing: calc(var(--base-size) * 2);
+	}
+}
+
+
+
 .text-content{
 	height: 100vh;
     width: 100%; 
@@ -77,6 +137,8 @@ body {
     text-align: center; 
 	padding: 0;
 }
+
+
 
 /* Glyph Styles */
 		.icon1 {
@@ -102,43 +164,51 @@ body {
 
 
 /* All mobile media queries */
-
 @media (max-width: 600px) {
 
 	.LandingHeader {
-        height: 50vh; /* Smaller header for mobile */
+        height: 100vh; /* Slightly larger to give more space */
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 
-	.scroll-arrow .arrow {
-		width: calc(var(--base-size)*3);
-		height: calc(var(--base-size)*3);
-		border: solid var(--background); 
-		border-width: 10px 10px 0 0; 
-		transform: rotate(90deg);
-		margin: 0 auto;
-		/* margin-bottom: calc(var(--padding)*2); */
+
+    .FirstTitle {
+        font-size: calc(var(--base-size) * 3.5); /* Slightly larger for impact */
+        margin-bottom: calc(var(--padding) * 1); /* Add more spacing below */
+    }
+
+    .MiddleTitle {
+        font-size: calc(var(--base-size) * 1.5); 
+        margin-top: calc(var(--padding) * 1); 
+		letter-spacing: calc(var(--base-size) * 1); 
+		font-weight: lighter;
+		animation: none;
+    }
+
+
+	.FirstTitle {
+		animation: 
+			textPulse 3s infinite ease-in-out; /* Pulsing animation for scale and opacity */
+	}
+	
+	@keyframes textPulse {
+		0%, 100% {
+			transform: scale(1); /* Normal size */
+			opacity: 1; /* Full opacity */
+		}
+		50% {
+			transform: scale(1.1); /* Slightly larger */
+			opacity: 0.8; /* Slight fade */
+		}
 	}
 
-/* Header Animations for .FirstTitle */
-.FirstTitle {
-    font-size: calc(var(--base-size) * 3); /* Adjust size for mobile */
-    display: inline-block; /* Needed for transform animations */
-    animation: scaleAndSpace 3s linear infinite; /* Linear infinite animation */
+
+.MiddleTitle {
+	animation: none; /* Remove animation for mobile */
 }
 
-/* Keyframes for Scaling and Letter Spacing */
-@keyframes scaleAndSpace {
-    0%, 100% {
-        transform: scale(1); /* Normal size */
-        letter-spacing: 2px; /* Default spacing */
-        opacity: 1; /* Full visibility */
-    }
-    50% {
-        transform: scale(1.2); /* Scaled up */
-        letter-spacing: 8px; /* Wider letter spacing */
-        opacity: 0.9; /* Slight fade */
-    }
-}
 
 
 	/* Glyph Styles for mobile */
@@ -216,9 +286,14 @@ body {
 
 
 
-/* Header Animations For Desktop */
-@media (min-width: 800px) {
-    .LandingHeader {
+
+
+
+
+/* REST OF DESKTOP MEDIA QUERIES */
+
+ @media (min-width: 800px) {
+	.LandingHeader {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -229,78 +304,14 @@ body {
     }
 
 
-	.FirstTitle {
-        font-size: calc(var(--base-size) * 12);
-        line-height: 0.4;
-        display: inline-block;
-        transition: all 0.5s ease; /* Smooth transitions for all properties */
-        color: var(--background);
-        text-decoration: none; /* Default state */
-        font-weight: bold;
-        -webkit-text-stroke: 0px; /* Default no stroke */
-    }
 
 	.FirstTitle {
-		animation: 
-			fadeInLargeText 2s ease-in-out forwards 1.5s, /* Delayed fade-in animation */
-			textStrokeEffect 4s infinite ease-in-out; /* Infinite text stroke animation */
-		opacity: 0; /* Start invisible */
+		font-size: calc(var(--base-size) * 12);
 	}
-	
-	@keyframes fadeInLargeText {
-		0% {
-			opacity: 0; /* Invisible */
-			transform: translateY(10px); /* Slightly lower */
-		}
-		100% {
-			opacity: 1; /* Fully visible */
-			transform: translateY(0); /* Reset position */
-		}
-	}
-	
-	@keyframes textStrokeEffect {
-		0%, 100% {
-			-webkit-text-stroke: 0px; /* No stroke */
-			/* color: var(--background); */
-		}
-		50% {
-			-webkit-text-stroke: 2px #FFF6E5; /* Cream stroke */
-			color: transparent; /* Outline only */
-		}
-	}
-	
+
 	.MiddleTitle {
-        display: inline-block;
-        font-size: calc(var(--base-size) * 4);
-        letter-spacing: calc(var(--base-size) * 2);
-        animation: letterSpacingLoop 4s infinite ease-in-out;
-    }
-
-    @keyframes letterSpacingLoop {
-        0% {
-            letter-spacing: calc(var(--base-size) * 2);
-        }
-        50% {
-            letter-spacing: 2px;
-        }
-        100% {
-            letter-spacing: calc(var(--base-size) * 2);
-        }
-    }
-
-
-
-}
-
-
-
-
-
-
-
-/* REST OF DESKTOP MEDIA QUERIES */
-
- @media (min-width: 800px) {
+		font-size: calc(var(--base-size) * 4);
+	}
 
 
     .text-content {
