@@ -9,6 +9,7 @@
 
 body {
     background-color: var(--background); 
+    padding-bottom: 120px; 
 }
 
 
