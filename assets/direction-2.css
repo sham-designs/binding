@@ -34,7 +34,6 @@ h1{
 
 .Title1, .Title2 {
     font-family: 'Climate Crisis';
-    font-size: calc(var(--base-size)*2.2);
     color: var(--red);
     text-align: center;
     text-transform: lowercase;
@@ -58,6 +57,63 @@ h1{
     margin-bottom: calc(var(--base-size)*2);
    }
 
+
+/* Stamp animation for middle text */
+@keyframes stamp-effect-title1 {
+  0% {
+    transform: rotate(-7deg) translateY(-50px); /* Starts off-screen above */
+    -webkit-text-stroke: 2px #DD1E26; /* Red stroke only */
+    color: transparent; /* No fill */
+    background-color: transparent; /* No background */
+  }
+  20% {
+    transform: rotate(-7deg) translateY(0) scale(1.05); /* Slight squash as it lands */
+    -webkit-text-stroke: 0; /* Remove stroke */
+    color: #FFF; /* White text */
+    background-color: #DD1E26; /* Red background */
+  }
+  100% {
+    transform: rotate(-7deg) translateY(0); /* Stay in final position */
+    -webkit-text-stroke: 0;
+    color: #FFF;
+    background-color: #DD1E26;
+  }
+}
+
+@keyframes stamp-effect-title2 {
+  0% {
+    transform: rotate(8deg) translateY(-50px); /* Starts off-screen above */
+    -webkit-text-stroke: 2px #DD1E26; /* Red stroke only */
+    color: transparent; /* No fill */
+    background-color: transparent; /* No background */
+  }
+  20% {
+    transform: rotate(8deg) translateY(0) scale(1.05); /* Slight squash as it lands */
+    -webkit-text-stroke: 0; /* Remove stroke */
+    color: #FFF; /* White text */
+    background-color: #DD1E26; /* Red background */
+  }
+  100% {
+    transform: rotate(8deg) translateY(0); /* Stay in final position */
+    -webkit-text-stroke: 0;
+    color: #FFF;
+    background-color: #DD1E26;
+  }
+}
+
+.Title1 {
+  animation: stamp-effect-title1 2s steps(1, end) infinite;
+  display: inline-block;
+}
+
+.Title2 {
+  animation: stamp-effect-title2 2s steps(1, end) infinite;
+  animation-delay: 0.5s; /* Staggered for variation */
+  display: inline-block;
+}
+
+
+
    .NotTitle{
     letter-spacing: 2px;
     text-align: center;
@@ -67,7 +123,6 @@ h1{
 cite{
 display: block;
 }
-
 
 
   .quote-container {
@@ -98,6 +153,44 @@ display: block;
   .bottom-bar{
     transform: rotate(5deg);
   }
+
+/* MOBILE MEDIA QUERIES */
+
+  @media (max-width:800px) {
+
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; 
+      padding: 10px; 
+      gap: calc(var(--padding)*5);
+    }
+
+    .NotTitle{
+      font-size: calc(var(--base-size)*3);
+      line-height: 1.5;
+
+    }
+  
+    .Title1,.Title2{
+      font-size: calc(var(--base-size)*2);
+      padding: 16px 8px;
+      display: inline-block; 
+    }
+
+    .Title1{
+      margin-top: calc(var(--padding)*4);
+    }
+    
+    cite {
+      font-size: calc(var(--base-size)* 1.2);
+  }
+
+  }
+
+
 
 
 
@@ -169,64 +262,6 @@ cite:nth-of-type(2) {
 }
 
 
-@keyframes stamp-effect-title1 {
-  0% {
-    transform: rotate(-7deg) translateY(-50px); /* Starts off-screen above */
-    -webkit-text-stroke: 2px #DD1E26; /* Red stroke only */
-    color: transparent; /* No fill */
-    background-color: transparent; /* No background */
-  }
-  20% {
-    transform: rotate(-7deg) translateY(0) scale(1.05); /* Slight squash as it lands */
-    -webkit-text-stroke: 0; /* Remove stroke */
-    color: #FFF; /* White text */
-    background-color: #DD1E26; /* Red background */
-  }
-  100% {
-    transform: rotate(-7deg) translateY(0); /* Stay in final position */
-    -webkit-text-stroke: 0;
-    color: #FFF;
-    background-color: #DD1E26;
-  }
-}
-
-@keyframes stamp-effect-title2 {
-  0% {
-    transform: rotate(8deg) translateY(-50px); /* Starts off-screen above */
-    -webkit-text-stroke: 2px #DD1E26; /* Red stroke only */
-    color: transparent; /* No fill */
-    background-color: transparent; /* No background */
-  }
-  20% {
-    transform: rotate(8deg) translateY(0) scale(1.05); /* Slight squash as it lands */
-    -webkit-text-stroke: 0; /* Remove stroke */
-    color: #FFF; /* White text */
-    background-color: #DD1E26; /* Red background */
-  }
-  100% {
-    transform: rotate(8deg) translateY(0); /* Stay in final position */
-    -webkit-text-stroke: 0;
-    color: #FFF;
-    background-color: #DD1E26;
-  }
-}
-
-/* Apply animations */
-.Title1 {
-  animation: stamp-effect-title1 2s steps(1, end) infinite;
-  display: inline-block;
-}
-
-.Title2 {
-  animation: stamp-effect-title2 2s steps(1, end) infinite;
-  animation-delay: 0.5s; /* Staggered for variation */
-  display: inline-block;
-}
-
-
-
-
-
 
 /* Author and Date (Cite) */
 cite {
@@ -234,8 +269,6 @@ cite {
   display: block;
   margin-top: 10px;
 }
-
-
 
 
 
