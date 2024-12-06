@@ -650,11 +650,15 @@ body {
 
 .footer-links a {
     display: block;
-    margin: 10px 0;
     color: #FFF6E5;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 	font-family: 'Courier Prime', monospace;
+}
+
+
+.footer-links a {
+	margin-bottom: var(--base-size);
 }
 
 .footer-links a:hover {
@@ -694,7 +698,6 @@ body {
 .back-to-top:hover {
     color: #000000; 
 }
-
 
 
 .footer-glyphs {

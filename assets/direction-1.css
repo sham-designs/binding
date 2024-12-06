@@ -402,10 +402,19 @@ p {
     color: var(--red);
     font-weight: bold;
     margin: var(--padding) auto;
-    width: 50vw; /* Center and constrain width */
+    width: 50vw; 
   }
 
+  .glyph-one .button-icon {
+    transform: rotate(45deg); 
+  }
+  
+  .glyph-one .glyph div {
+    background-color: #000000; 
+    transition: background-color 0.3s ease;
+}
 
+  
 
 
      }
