@@ -238,37 +238,38 @@ body {
         text-decoration: none; /* Default state */
         font-weight: bold;
         -webkit-text-stroke: 0px; /* Default no stroke */
-		cursor: pointer;
     }
 
-	.FirstTitle:hover {
-		animation: sequentialStyling 3s steps(3) alternate; /* Runs keyframes */
+	.FirstTitle {
+		animation: 
+			fadeInLargeText 2s ease-in-out forwards 1.5s, /* Delayed fade-in animation */
+			textStrokeEffect 4s infinite ease-in-out; /* Infinite text stroke animation */
+		opacity: 0; /* Start invisible */
 	}
 	
-	/* Keyframes for Sequential Styling */
-	@keyframes sequentialStyling {
+	@keyframes fadeInLargeText {
 		0% {
-			color: var(--background); 
-			-webkit-text-stroke: 0px;
-			text-decoration: none;
-		}
-		33% {
-			color: transparent; /* Stroke only */
-			-webkit-text-stroke: 1px #FFF8E5;
-			text-decoration: none;
-		}
-		66% {
-			color: #FFF8E5; 
-			-webkit-text-stroke: 0px;
-			text-decoration: underline;
+			opacity: 0; /* Invisible */
+			transform: translateY(10px); /* Slightly lower */
 		}
 		100% {
-			color: var(--background); 
-			text-decoration: overline;
+			opacity: 1; /* Fully visible */
+			transform: translateY(0); /* Reset position */
 		}
 	}
-
-    .MiddleTitle {
+	
+	@keyframes textStrokeEffect {
+		0%, 100% {
+			-webkit-text-stroke: 0px; /* No stroke */
+			/* color: var(--background); */
+		}
+		50% {
+			-webkit-text-stroke: 2px #FFF6E5; /* Cream stroke */
+			color: transparent; /* Outline only */
+		}
+	}
+	
+	.MiddleTitle {
         display: inline-block;
         font-size: calc(var(--base-size) * 4);
         letter-spacing: calc(var(--base-size) * 2);
@@ -286,7 +287,14 @@ body {
             letter-spacing: calc(var(--base-size) * 2);
         }
     }
+
+
+
 }
+
+
+
+
 
 
 
