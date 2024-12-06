@@ -367,4 +367,17 @@ header {
 
 
 
+.glyph-two .glyph div:nth-child(1) {
+  transform: translateY(-5px); /* Move first line up */
+  transition: transform 0.3s ease;
+  background-color: #000000; 
+}
+
+.glyph-two .glyph div:nth-child(2) {
+  transform: translateY(5px); /* Move second line down */
+  transition: transform 0.3s ease;
+  background-color: #000000; 
+}
+
+
   }

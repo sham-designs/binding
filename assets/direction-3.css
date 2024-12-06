@@ -360,7 +360,26 @@ cite:nth-of-type(1) {
     transform: rotate(10deg);
   }
   
-
+  .glyph-three .glyph div:nth-child(1) {
+    transform: rotate(10deg); /* Skew first line slightly */
+    transition: transform 0.3s ease;
+    background-color: #000000; 
+  
+  }
+  
+  .glyph-three .glyph div:nth-child(2) {
+    transform: rotate(-10deg); /* Skew second line in the opposite direction */
+    transition: transform 0.3s ease;
+    background-color: #000000; 
+  
+  }
+  
+  .glyph-three .glyph div:nth-child(3) {
+    transform: rotate(15deg); /* Skew third line a bit more */
+    transition: transform 0.3s ease;
+    background-color: #000000; 
+  
+  }
 
 
   }
