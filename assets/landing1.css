@@ -210,6 +210,7 @@ body {
 }
 
 .text-content{
+	height: 80vh;
 	text-align: left;
 }
 
