@@ -10,8 +10,47 @@ body {
 .LandingHeader {
     background: var(--red);
     padding: calc(var(--padding) * 2) var(--padding);
-    text-align: center;
+	background: var(--red); /* Keep the red background */
+    padding: 0; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%; 
+    text-align: center; 
+
 }
+
+/* Arrow on header */
+.scroll-arrow {
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    animation: bounce 1.5s infinite;
+}
+
+.scroll-arrow .arrow {
+    width: calc(var(--base-size)*4);
+    height: calc(var(--base-size)*4);
+    border: solid var(--background); 
+    border-width: 10px 10px 0 0; 
+    transform: rotate(90deg);
+    margin: 0 auto;
+	margin-bottom: calc(var(--padding)*2);
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0) rotate(45deg);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px) rotate(45deg); /* Move down slightly */
+    }
+}
+
+/* Basic header styles */
 
 .FirstTitle {
     font-family: 'Climate Crisis';
@@ -30,7 +69,7 @@ body {
 }
 
 
-/* Distinct Glyph Styles */
+/* Glyph Styles */
 		.icon1 {
 			font-family: 'Climate Crisis', sans-serif;
 			color: var(--red);
@@ -56,7 +95,20 @@ body {
 /* All mobile media queries */
 
 @media (max-width: 600px) {
-  
+
+	.LandingHeader {
+        height: 50vh; /* Smaller header for mobile */
+    }
+
+	.scroll-arrow .arrow {
+		width: calc(var(--base-size)*3);
+		height: calc(var(--base-size)*3);
+		border: solid var(--background); 
+		border-width: 10px 10px 0 0; 
+		transform: rotate(90deg);
+		margin: 0 auto;
+		/* margin-bottom: calc(var(--padding)*2); */
+	}
 
 /* Header Animations for .FirstTitle */
 .FirstTitle {
@@ -164,6 +216,7 @@ body {
         justify-content: center;
         padding-top: calc(var(--padding) * 10);
         padding-bottom: calc(var(--padding) * 10);
+		
     }
 
 
@@ -176,6 +229,7 @@ body {
         text-decoration: none; /* Default state */
         font-weight: bold;
         -webkit-text-stroke: 0px; /* Default no stroke */
+		cursor: pointer;
     }
 
 	.FirstTitle:hover {
