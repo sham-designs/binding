@@ -170,7 +170,7 @@ body {
         height: 100vh; /* Slightly larger to give more space */
         display: flex;
         flex-direction: column;
-        text-align: center;
+		
     }
 
 
@@ -209,6 +209,9 @@ body {
 	animation: none; /* Remove animation for mobile */
 }
 
+.text-content{
+	text-align: left;
+}
 
 
 	/* Glyph Styles for mobile */
