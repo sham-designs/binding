@@ -35,7 +35,6 @@ h2{
     color: var(--background);
     -webkit-text-stroke: 1px #DD1E26;
     text-align: center;
-    font-size: calc(var(--base-size)*1.8);
     margin: var(--padding);
     background-color: var(--background);
 
@@ -68,11 +67,11 @@ h3{
 }
 
 .Title {
-  position: relative; /* Ensure it acts as a container for the pseudo-elements */
+  position: relative; 
   display: inline-block; 
   -webkit-text-stroke: 2px #FFF8E5;
-  text-decoration: none; /* Remove default text decoration */
-  overflow: hidden; /* Hide animated lines outside the container */
+  text-decoration: none; 
+  overflow: hidden;
 }
 
 .Title::before,
@@ -89,11 +88,13 @@ h3{
 }
 
 .Title::before {
-  animation: strike-through 10s infinite; /* Apply animation to the first line */
+  animation: strike-through 3s infinite; 
+  animation-fill-mode: forwards; 
 }
 
 .Title::after {
-  animation: strike-through 10s infinite 12s; /* Stagger the second line */
+  animation: strike-through 3s infinite 1.5s; 
+  animation-fill-mode: forwards; 
 }
 
 .Title span::after {
@@ -163,6 +164,95 @@ blockquote{
             font-family: 'Anton'; 
  }
           
+
+
+@media (max-width:800px) {
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    padding: 10px; 
+    gap: calc(var(--padding)*2);
+  }
+
+  
+  .Title {
+    margin-top: calc(var(--padding)*2);
+    margin-top: calc(var(--padding)*2);
+    font-size: calc(var(--base-size)*2.5);
+    animation: bounce 2s ease-in-out infinite;
+    background-color: var(--red);
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0); /* Default position */
+    }
+    50% {
+      transform: translateY(-30px); /* Moves slightly up */
+    }
+  }
+
+  .NotTitle{
+    font-size: calc(var(--base-size)*2.8);
+
+  }
+
+  cite{
+    font-size: calc(var(--base-size)*1.2);
+  }
+
+  header section {
+    margin-top: 50px;
+  }
+   
+  .Title::before,
+  .Title::after {
+    content: '';
+    display: none; 
+  }
+
+        h2{
+        font-size: calc(var(--base-size)*3);
+        position: relative; 
+        animation: strikethrough 2s ease-in-out infinite;
+        }
+
+        @keyframes strikethrough {
+          0%, 20% {
+            text-decoration: none; /* Normal state */
+            color: var(--red);
+          }
+          50% {
+            text-decoration: line-through; /* Add strikethrough */
+            color: var(--red); /* Keep color consistent */
+          }
+          80%, 100% {
+            text-decoration: none; /* Revert to normal */
+            color: var(--red);
+          }
+
+        }
+
+h3{
+  font-size: calc(var(--base-size)*1.5);
+}
+
+.quote{
+  color: #000000;
+  -webkit-text-stroke: 0px #000000;
+  text-align: left;
+  margin: 24px 12px;
+}
+
+}
+
+
+}
+
 
 
 
@@ -283,22 +373,22 @@ p {
   h2 {
     font-family: 'Anton';
     color: var(--background);
-    -webkit-text-stroke: 1px #DD1E26;
+    /* -webkit-text-stroke: 1px #DD1E26; */
+    color: #000000;
+    -webkit-text-stroke: 1px #000000;
     text-align: center;
     font-size: calc(var(--base-size) * 3);
     margin: var(--padding) auto;
     width: 50vw; 
     /* display: inline-block; */
     transition: transform 0.5s ease;
-    /* if I want to make h2 sticky */
-        /* position: sticky;
-        top: 0;
-        z-index: 10; */
+ 
   }
 
   h2:hover {
     transform: scaleX(1.2);
     color: var(--red);
+    -webkit-text-stroke: 1px #DD1E26;
   }
 
   h3 {
