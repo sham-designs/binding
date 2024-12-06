@@ -72,39 +72,39 @@ body {
 .FirstTitle {
 	line-height: 0.4;
 	display: inline-block;
-	transition: all 0.5s ease; /* Smooth transitions for all properties */
+	transition: all 0.5s ease; 
 	color: var(--background);
-	text-decoration: none; /* Default state */
+	text-decoration: none; 
 	font-weight: bold;
-	-webkit-text-stroke: 0px; /* Default no stroke */
+	-webkit-text-stroke: 0px; 
 }
 
 .FirstTitle {
 	animation: 
-		fadeInLargeText 2s ease-in-out forwards 1.5s, /* Delayed fade-in animation */
-		textStrokeEffect 4s infinite ease-in-out; /* Infinite text stroke animation */
-	opacity: 0; /* Start invisible */
+		fadeInLargeText 2s ease-in-out forwards 1.5s, 
+		textStrokeEffect 4s infinite ease-in-out;
+		opacity: 0; 
 }
 
 @keyframes fadeInLargeText {
 	0% {
-		opacity: 0; /* Invisible */
-		transform: translateY(10px); /* Slightly lower */
+		opacity: 0; 
+		transform: translateY(10px); 
 	}
 	100% {
-		opacity: 1; /* Fully visible */
-		transform: translateY(0); /* Reset position */
+		opacity: 1; 
+		transform: translateY(0); 
 	}
 }
 
 @keyframes textStrokeEffect {
 	0%, 100% {
-		-webkit-text-stroke: 0px; /* No stroke */
+		-webkit-text-stroke: 0px; 
 		/* color: var(--background); */
 	}
 	50% {
-		-webkit-text-stroke: 2px #FFF6E5; /* Cream stroke */
-		color: transparent; /* Outline only */
+		-webkit-text-stroke: 2px #FFF6E5; 
+		color: transparent; 
 	}
 }
 
@@ -167,7 +167,7 @@ body {
 @media (max-width: 800px) {
 
 	.LandingHeader {
-        height: 100vh; /* Slightly larger to give more space */
+        height: 100vh; 
         display: flex;
         flex-direction: column;
 		
@@ -175,8 +175,8 @@ body {
 
 
     .FirstTitle {
-        font-size: calc(var(--base-size) * 3.5); /* Slightly larger for impact */
-        margin-bottom: calc(var(--padding) * 1); /* Add more spacing below */
+        font-size: calc(var(--base-size) * 3.5); 
+        margin-bottom: calc(var(--padding) * 1); 
     }
 
     .MiddleTitle {
@@ -190,23 +190,23 @@ body {
 
 	.FirstTitle {
 		animation: 
-			textPulse 3s infinite ease-in-out; /* Pulsing animation for scale and opacity */
+			textPulse 3s infinite ease-in-out; 
 	}
 	
 	@keyframes textPulse {
 		0%, 100% {
-			transform: scale(1); /* Normal size */
-			opacity: 1; /* Full opacity */
+			transform: scale(1); 
+			opacity: 1; 
 		}
 		50% {
-			transform: scale(1.1); /* Slightly larger */
-			opacity: 0.8; /* Slight fade */
+			transform: scale(1.1); 
+			opacity: 0.8; 
 		}
 	}
 
 
 .MiddleTitle {
-	animation: none; /* Remove animation for mobile */
+	animation: none; 
 }
 
 .text-content{
@@ -230,16 +230,16 @@ body {
 
 @keyframes rotationalPulse {
     0%, 100% {
-        transform: rotate(0deg); /* Default position */
+        transform: rotate(0deg); 
     }
     50% {
-        transform: rotate(10deg); /* Slight clockwise rotation */
+        transform: rotate(10deg); 
     }
 }
 
 /* Article Links */
 .article-links ol {
-    list-style: none; /* Remove default bullet points */
+    list-style: none; 
     margin: 0;
     padding: 0;
 	margin-top: calc(var(--padding)*2);
@@ -247,14 +247,14 @@ body {
 }
 
 .article-links li {
-    display: block; /* Remove flex to stack content */
-    text-align: center; /* Center the title and glyph */
+    display: block;
+    text-align: center; 
 	margin-bottom: 20px;
-	padding-top: 10px; /* Add space above content */
-	border-top: 2px solid #DD1E26; /* Add top border in red */
+	padding-top: 10px;
+	border-top: 2px solid #DD1E26; 
 }
 
-/* Default Text (Bold Red Anton) */
+/* Default Text */
 .article-links .default-text {
     font-family: 'Anton', sans-serif;
     font-weight: bold; 
@@ -267,24 +267,24 @@ body {
 	display: block;
 }
 
-/* Hide Hover Text and Descriptions */
+
 .article-links .hover-text {
-    display: none; /* Fully hide hover text */
+    display: none; 
 }
 
 .big-footer {
-    padding: 20px 10px; /* Reduce padding */
-    text-align: center; /* Ensure content is centered */
+    padding: 20px 10px; 
+    text-align: center;
   }
 
   .footer-thankyou h5 {
-    font-size: calc(var(--base-size) * 3); /* Smaller heading size */
-    margin-bottom: 20px; /* Adjust spacing */
+    font-size: calc(var(--base-size) * 3); 
+    margin-bottom: 20px; 
   }
 
   .footer-links h3,
   .footer-colophon h3 {
-    font-size: calc(var(--base-size) * 2); /* Smaller subheading size */
+    font-size: calc(var(--base-size) * 2); 
     margin-bottom: 10px;
   }
 
@@ -295,22 +295,21 @@ body {
 
 
   .footer-content {
-    flex-direction: column; /* Stack items vertically */
-    text-align: center; /* Optional: center-align text */
-    gap: 20px; /* Add spacing between the sections */
+    flex-direction: column; 
+    text-align: center; 
+    gap: 20px;
   }
 
   .footer-links,
   .footer-colophon {
-    margin: 0 auto; /* Optional: center-align the sections */
-    width: 100%; /* Make them take up the full width */
+    margin: 0 auto; 
+    width: 100%; 
   }
 
-
   .footer-glyphs .glyph {
-    width: 3px; /* Narrower glyphs */
-    height: 50px; /* Shorter glyphs */
-    gap: 15px; /* Reduce spacing between glyphs */
+    width: 3px; 
+    height: 50px; 
+    gap: 15px; 
   }
 
   .back-to-top{
@@ -337,13 +336,13 @@ body {
 		/* Article Links Section */
 		.article-links {
 			display: flex;
-			flex-direction: column; /* Vertical stack */
-			gap: 30px; /* Space between rows */
+			flex-direction: column; 
+			gap: 30px; 
 			width: 100%;
 			max-width: 800px;
-			margin: 50px auto 0 auto; /* Centered */
+			margin: 50px auto 0 auto; 
 			padding: 0;
-			width: 100vw; /* Force the container to span the full viewport width */
+			width: 100vw; 
 		}
 	
 		.article-links ol {
