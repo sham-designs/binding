@@ -126,6 +126,15 @@ h1 {
   margin-top: 40px;
 }
 
+cite:nth-of-type(1) {
+margin-top: calc(var(--base-size)*6);
+}
+
+cite:nth-of-type(2) {
+  margin-top: calc(var(--base-size)*2);
+  }
+  
+
 /* Subtitle ('There is no such thing as') */
 .NotTitle {
   font-size: 70px;
@@ -221,10 +230,6 @@ h1 {
 
 /* Author and Date (Cite) */
 cite {
-  font-family: 'Anton', sans-serif;
-  font-size: 28px;
-  color: #DD1E26;
-  text-transform: uppercase;
   letter-spacing: 2px;
   display: block;
   margin-top: 10px;
@@ -241,7 +246,7 @@ cite {
     width: 50vw; /* Limit the width to half the viewport */
   }
 
-  p:nth-child(1){
+  p:nth-of-type(1) {
     margin-top: 120px;
   }
 

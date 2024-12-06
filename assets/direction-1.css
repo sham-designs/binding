@@ -133,14 +133,14 @@ h3{
     }
 
 
- cite{
-        display: block;
-        text-align: center;
-        margin-top: calc(var(--base-size)*0.8);
-        margin-bottom: calc(var(--base-size)*0.8);
-        line-height: 0.3;
+    cite{
+      display: block;
+      text-align: center;
+      margin-top: calc(var(--base-size)*0.8);
+      margin-bottom: calc(var(--base-size)*0.8);
+      line-height: 0.3;
 
- }
+}
 
 blockquote{
             position: relative;
@@ -214,11 +214,7 @@ blockquote{
         font-size: calc(var(--base-size)*4.5);
       }
 
-      cite{
-        font-size: calc(var(--base-size)*2.4);
-        letter-spacing: 22px;
-        line-height: 0.2;
-      }
+     
 
 
 p {

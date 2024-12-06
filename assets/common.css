@@ -44,6 +44,14 @@ h1{
 }
 
 
+cite{
+  color: #000000;
+	font-family: 'Anton';
+	letter-spacing: 2px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
 .Title {
     font-family: 'Climate Crisis';
     font-size: calc(var(--base-size)*2.6);
@@ -60,12 +68,6 @@ h1{
   }
 
 
-cite{
-	font-family: 'Anton';
-	color: var(--red);
-	letter-spacing: 12px;
-    text-align: center;
-}
 
 h2{
     font-family: 'Anton';
@@ -188,6 +190,12 @@ h2{
     }
 
   @media (min-width: 800px) {
+
+    cite{
+      font-size: calc(var(--base-size)*2);
+      letter-spacing: 2px;
+      line-height: 0.2;
+    }
 
 
 /* Hover Effect */
