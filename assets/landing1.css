@@ -333,6 +333,14 @@ body {
 	}
 
 
+
+	.text-content p {
+		max-width: 70vw;
+        font-size: var(--base-size);
+		text-align: left;
+		margin: calc(var(--padding) * 1.5) 0;
+    }
+
 		/* Article Links Section */
 		.article-links {
 			display: flex;
