@@ -138,11 +138,20 @@ blockquote{
       
 
       h2{
-        font-size: calc(var(--base-size)*3);
+        font-size: calc(var(--base-size)*2.5);
+        position: sticky;
+        top: 0; 
+        z-index: 1;
+        transition: opacity 0.3s ease; 
+        opacity: 1;
       }
 
+      .blockquote-container:in-view ~ h2 {
+        opacity: 0; 
+      }
 
       .blockquote-container{
+        z-index: 2;
         margin: 24px 12px;
         display: inline-block;
         position: relative;
