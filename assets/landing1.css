@@ -164,7 +164,7 @@ body {
 
 
 /* All mobile media queries */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
 	.LandingHeader {
         height: 100vh; /* Slightly larger to give more space */
@@ -320,9 +320,222 @@ body {
 }
 
 
-  
+  /* Trying to make landing page fluid */
+
+@media (min-width:800px) and (max-width:1200px){
 
 
+	.FirstTitle {
+		font-size: calc(var(--base-size) * 8);
+	}
+
+	.MiddleTitle {
+		font-size: calc(var(--base-size) * 3);
+	}
+
+
+		/* Article Links Section */
+		.article-links {
+			display: flex;
+			flex-direction: column; /* Vertical stack */
+			gap: 30px; /* Space between rows */
+			width: 100%;
+			max-width: 800px;
+			margin: 50px auto 0 auto; /* Centered */
+			padding: 0;
+			width: 100vw; /* Force the container to span the full viewport width */
+		}
+	
+		.article-links ol {
+			padding: 0;
+			margin: 0;
+		}
+	
+		.article-links li {
+			list-style: none;
+			display: flex; /* Horizontal layout for glyph and text */
+			align-items: center; /* Vertically align glyph and text */
+			gap: 20px; /* Space between glyph and text-box */
+			position: relative;
+			width: 100%; /* Make the row span full width */
+		}
+		
+		.article-links a {
+			width: 100%; /* Ensure link spans full width */
+		}
+
+
+		/* Glyph Styles for desktop */
+		.icon1 {
+			font-size: 100px; /* Large glyph */
+			margin-right: 20px;
+			transition: all 0.3s ease-in-out;
+		}
+	
+		.icon2 {
+			font-size: 100px; /* Large glyph */
+			margin-right: 20px;
+			transition: all 0.3s ease-in-out;
+		}
+	
+		.icon3 {
+			font-size: 100px; /* Large glyph */
+			margin-right: 20px;
+			text-decoration-thickness: 18px;
+			transition: all 0.3s ease-in-out;
+		}
+	
+		/* Hover Effect for lists!!!!! */
+		li:hover,
+		li:hover,
+		li:hover{
+			color:var(--background);
+			background-color: black; /* Background turns black */
+			padding: 10px; /* Add some padding to emphasize the change */
+		}
+		/* li:hover .icon1,{
+			color: var(--background);
+			-webkit-text-stroke: 2px var(--background);
+
+		} */
+
+		li:hover .icon1, li:hover .icon2, li:hover .icon3{
+			color: var(--background);
+			-webkit-text-stroke: 2px var(--background);
+
+		}
+
+		.text-box {
+			display: flex; /* Ensure the box is a flex container */
+			flex: 1; /* Take up remaining horizontal space */
+			justify-content: flex-start; /* Align text inside to the left */
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		
+		.default-text {
+			font-family: 'Anton';
+			text-transform: capitalize;
+			text-decoration: line-through;
+			font-size: calc(var(--base-size) * 6);
+			color: var(--red);
+			opacity: 1; /* Visible by default */
+			transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+		}
+		
+	
+		/* Hover Text */
+		.hover-text {
+			display: flex;
+			flex-direction: column; /* Align text horizontally */
+			align-items: flex-start;
+			width: 100%;
+			font-family: 'Courier Prime', monospace;
+			font-size: 24px;
+			color: var(--background);
+			opacity: 0; /* Hidden by default */
+			visibility: hidden; /* Hidden by default */
+			transform: translateX(-10px); /* Start slightly offset for animation */
+			transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+		}
+	
+		.hover-text .title {
+			font-family: 'Anton';
+			font-size: calc(var(--base-size)*3);
+		}
+			
+
+
+		/* Add Diagonal Arrow to Hover Text */
+		.hover-text::after {
+			content: " →";
+			font-size:100px;
+			margin-left: 8px;
+			line-height: 1;
+			font-family: 'Courier New', monospace; 
+			font-weight: bold;        
+			transform: rotate(-45deg);   /* Rotate to make it diagonal */
+			display: inline-block;      /* Ensure it's treated like a block for transformations */
+			color: #FF5733;             /* Custom color for the arrow */
+			transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+		}
+		
+
+		li:hover .hover-text::after {
+			transform: rotate(0deg);  
+			color: var(--background);  
+			text-align: right;
+		}
+
+	
+		/* Hover Effect for Text */
+		li:hover .default-text {
+			opacity: 0; 
+			visibility: hidden;
+			transform: translateX(10px); 
+		}
+	
+		li:hover .hover-text {
+			opacity: 1; 
+			visibility: visible;
+			transform: translateX(0); 
+		}
+	
+		
+		li + li {
+			border-top: 1px solid var(--red); 
+			padding-top: 20px;
+		}
+	
+
+
+		.default-text {
+			opacity: 1;
+			visibility: visible;
+			position: absolute; 
+			transition: opacity 0.3s ease, visibility 0.3s ease;
+			white-space: nowrap; 
+		}
+		
+		li:hover .default-text {
+			opacity: 0; 
+			visibility: hidden; 
+			position: absolute; 
+		}
+		
+		.text-box {
+			display: flex;
+			flex-direction: column; 
+			justify-content: flex-start;
+			align-items: flex-start; 
+			position: relative;
+			overflow: hidden; 
+		}
+		
+		.hover-text {
+			position: relative;
+			top: 0; 
+			left: 0; 
+			opacity: 0; 
+			visibility: hidden; 
+			transition: opacity 0.3s ease, visibility 0.3s ease;
+		}
+		
+		li:hover .hover-text {
+			opacity: 1; 
+			visibility: visible; 
+		}
+
+		.footer-thankyou h5 {
+			font-size: calc(var(--base-size) * 7); 
+			margin-bottom: 20px; 
+		  }
+
+		  .back-to-top{
+			font-family: 'Anton';
+		  }
+
+}
 
 
 
@@ -337,7 +550,7 @@ body {
 
 /* REST OF DESKTOP MEDIA QUERIES */
 
- @media (min-width: 800px) {
+ @media (min-width: 1200px) {
 	.LandingHeader {
         display: flex;
         flex-direction: column;
